@@ -17,7 +17,7 @@ rsync -a --delete \
   --exclude='cache/' --exclude='logs/' --exclude='lsp/' --exclude='bin/' \
   --exclude='image_cache/' --exclude='audio_cache/' --exclude='runtime/' \
   --exclude='sandboxes/' --exclude='desktop/' \
-  --exclude='state.db*' --exclude='*.lock' --exclude='*.pid' \
+  --exclude='state.db*' --exclude='*.db-shm' --exclude='*.db-wal' --exclude='*.lock' --exclude='*.pid' \
   --exclude='models_dev_cache.json' --exclude='ollama_cloud_models_cache.json' \
   --exclude='provider_models_cache.json' --exclude='.update_check' \
   --exclude='.mcp-discovery.lock' --exclude='processes.json' \

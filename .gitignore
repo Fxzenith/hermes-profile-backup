@@ -9,6 +9,8 @@ sandboxes/
 desktop/
 state.db-wal
 state.db-shm
+*.db-wal
+*.db-shm
 *.lock
 *.pid
 models_dev_cache.json
