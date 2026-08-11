@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-08-11T09:05:04.734988",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "6898985502",
+        "name": "Ze Nith",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-1003938786142",
+        "name": "CONFERENCE ROOM",
+        "type": "group",
+        "thread_id": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+cache/
+logs/
+lsp/
+bin/
+image_cache/
+audio_cache/
+runtime/
+sandboxes/
+desktop/
+state.db-wal
+state.db-shm
+*.lock
+*.pid
+models_dev_cache.json
+ollama_cloud_models_cache.json
+provider_models_cache.json
+.update_check

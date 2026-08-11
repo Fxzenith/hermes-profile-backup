@@ -1,0 +1,39 @@
+{
+  "profile": {
+    "name": "Ze Nith",
+    "handle": "@zenith",
+    "verified": true,
+    "headshot": "headshots/default-headshot.png"
+  },
+  "theme": "dark",
+  "slides": [
+    {
+      "tweets": [
+        {
+          "text": "Perfectionism is just fear in a tuxedo.\n\nIt whispers: \"Wait until it's ready.\"\n\nIt's never ready. Ship it anyway.",
+          "image": null
+        }
+      ]
+    },
+    {
+      "tweets": [
+        {
+          "text": "The gap between where you are and where you want to be...\n\nIs filled with imperfect action.\nNot perfect plans.",
+          "image": null
+        },
+        {
+          "text": "Every expert was once a beginner who refused to quit.\n\nThe only difference: they started before they felt ready.\n\nYou can too.",
+          "image": null
+        }
+      ]
+    },
+    {
+      "tweets": [
+        {
+          "text": "Progress > Perfection\n\nSave this carousel. Read it when you're stuck.\n\nThen take one messy step forward.",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

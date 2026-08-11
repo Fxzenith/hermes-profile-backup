@@ -1,0 +1,68 @@
+[
+  {
+    "path": "/root/.hermes/cache/delegation/live/deleg_d5ff4495/task-0.log",
+    "timestamp": "2026-08-08T07:18:20.692329+00:00",
+    "category": "temp",
+    "size": 3748
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1786175034-32bb0e44.sh",
+    "timestamp": "2026-08-08T07:43:54.235004+00:00",
+    "category": "temp",
+    "size": 704
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1786175226-694ea8d4.sh",
+    "timestamp": "2026-08-08T07:47:06.795259+00:00",
+    "category": "temp",
+    "size": 668
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1786264976-9cd64052.sh",
+    "timestamp": "2026-08-09T08:42:56.362009+00:00",
+    "category": "temp",
+    "size": 572
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1786265571-dc8a797d.sh",
+    "timestamp": "2026-08-09T08:52:51.100083+00:00",
+    "category": "temp",
+    "size": 851
+  },
+  {
+    "path": "/root/.hermes/cache/audio/audio_224429131a3c.mp3",
+    "timestamp": "2026-08-09T11:14:44.026572+00:00",
+    "category": "temp",
+    "size": 3121319
+  },
+  {
+    "path": "/root/.hermes/cache/audio/audio_2cabebd5094f.mp3",
+    "timestamp": "2026-08-09T11:14:44.028828+00:00",
+    "category": "temp",
+    "size": 5313097
+  },
+  {
+    "path": "/root/.hermes/cache/audio/audio_6e8ef3ed7727.mp3",
+    "timestamp": "2026-08-09T11:28:16.057025+00:00",
+    "category": "temp",
+    "size": 3705935
+  },
+  {
+    "path": "/root/.hermes/cache/audio/audio_2bc2fc8da53b.mp3",
+    "timestamp": "2026-08-09T11:28:16.059090+00:00",
+    "category": "temp",
+    "size": 4050115
+  },
+  {
+    "path": "/root/.hermes/cache/audio",
+    "timestamp": "2026-08-09T12:12:44.090622+00:00",
+    "category": "temp",
+    "size": 0
+  },
+  {
+    "path": "/root/.hermes/cache",
+    "timestamp": "2026-08-10T12:21:04.540015+00:00",
+    "category": "temp",
+    "size": 0
+  }
+]

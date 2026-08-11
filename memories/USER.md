@@ -1,0 +1,1 @@
+Prefers simple, easily understandable app and business ideas solving real daily problems with low AI token costs over complex technical or B2B/developer-focused architectures.
