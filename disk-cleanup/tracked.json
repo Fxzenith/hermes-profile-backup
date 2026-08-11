@@ -64,5 +64,23 @@
     "timestamp": "2026-08-10T12:21:04.540015+00:00",
     "category": "temp",
     "size": 0
+  },
+  {
+    "path": "/root/.hermes/cache/delegation/live/deleg_95d409d1/task-0.log",
+    "timestamp": "2026-08-11T13:12:53.372996+00:00",
+    "category": "temp",
+    "size": 2076
+  },
+  {
+    "path": "/root/.hermes/cache/delegation/live/deleg_8242ee5b/task-0.log",
+    "timestamp": "2026-08-11T13:50:37.005683+00:00",
+    "category": "temp",
+    "size": 4034
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1786460701-bc274f4e.sh",
+    "timestamp": "2026-08-11T15:05:01.259199+00:00",
+    "category": "temp",
+    "size": 460
   }
 ]

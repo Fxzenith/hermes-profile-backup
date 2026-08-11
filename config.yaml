@@ -135,10 +135,11 @@ voice:
 memory:
   memory_enabled: true
   user_profile_enabled: true
-  memory_char_limit: 4000
+  memory_char_limit: 800
   user_char_limit: 3000
   flush_min_turns: 6
   nudge_interval: 10
+  provider: gbrain
 delegation:
   max_iterations: 50
   max_concurrent_children: 5

@@ -1,0 +1,3 @@
+name: gbrain
+version: 0.1.0
+description: "GBrain second brain as a Hermes memory provider — per-turn hybrid recall + capture via the gbrain CLI (PGLite + vector embeddings)."

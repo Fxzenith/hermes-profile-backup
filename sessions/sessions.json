@@ -2,9 +2,9 @@
   "_README": "LEGACY MIRROR of the gateway routing index (the primary copy lives in the gateway_routing table in ~/.hermes/state.db). Maps messaging session keys (agent:main:<platform>:...) to active session IDs. This is NOT the session list. ALL sessions (CLI, TUI, and gateway) live in ~/.hermes/state.db and are shown by `hermes sessions list` and `/sessions`. Disable this file with `gateway.write_sessions_json: false` in config.yaml.",
   "agent:main:telegram:dm:6898985502": {
     "session_key": "agent:main:telegram:dm:6898985502",
-    "session_id": "20260810_204403_98ceca04",
-    "created_at": "2026-08-10T20:44:03.745422",
-    "updated_at": "2026-08-10T20:51:05.092022",
+    "session_id": "20260811_165337_5397b002",
+    "created_at": "2026-08-11T16:53:37.117508",
+    "updated_at": "2026-08-11T18:36:44.535863",
     "display_name": "Ze Nith",
     "platform": "telegram",
     "chat_type": "dm",
@@ -14,7 +14,7 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 52358,
+    "last_prompt_tokens": 39858,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
     "expiry_finalized": true,
@@ -22,6 +22,8 @@
     "resume_pending": false,
     "resume_reason": null,
     "last_resume_marked_at": null,
+    "active_turn_token": null,
+    "active_turn_started_at": null,
     "is_fresh_reset": false,
     "was_auto_reset": false,
     "auto_reset_reason": null,
@@ -36,14 +38,14 @@
       "user_name": "Ze Nith",
       "thread_id": null,
       "chat_topic": null,
-      "message_id": "4558"
+      "message_id": "4640"
     }
   },
   "agent:main:telegram:group:-1003938786142:6898985502": {
     "session_key": "agent:main:telegram:group:-1003938786142:6898985502",
-    "session_id": "20260810_204318_c74f2fbc",
-    "created_at": "2026-08-10T20:43:18.994417",
-    "updated_at": "2026-08-10T20:43:18.994417",
+    "session_id": "20260811_180201_88718da6",
+    "created_at": "2026-08-11T18:02:01.115119",
+    "updated_at": "2026-08-11T18:15:04.832392",
     "display_name": "CONFERENCE ROOM",
     "platform": "telegram",
     "chat_type": "group",
@@ -53,7 +55,7 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 0,
+    "last_prompt_tokens": 37637,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
     "expiry_finalized": true,
@@ -61,6 +63,8 @@
     "resume_pending": false,
     "resume_reason": null,
     "last_resume_marked_at": null,
+    "active_turn_token": null,
+    "active_turn_started_at": null,
     "is_fresh_reset": false,
     "was_auto_reset": false,
     "auto_reset_reason": null,
@@ -75,7 +79,7 @@
       "user_name": "Ze Nith",
       "thread_id": null,
       "chat_topic": null,
-      "message_id": "1024"
+      "message_id": "1032"
     }
   }
 }

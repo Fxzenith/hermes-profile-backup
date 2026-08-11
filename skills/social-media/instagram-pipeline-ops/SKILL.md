@@ -53,6 +53,7 @@ Deps: Pillow + numpy in the box's python; ffmpeg/ffprobe for reel encode and dec
 7. **State guards**: `reel_state.json` / `story_state.json` keep one reel/story per day — reruns same day are silent no-ops (exit 0). Quote itself is locked per date so re-renders reuse the same card.
 
 ## Pitfalls
+- **Script-only cron jobs resolve bare filenames ONLY under `~/.hermes/scripts/`** — the cron API rejects absolute paths and ignores the job's `workdir` for script lookup (`script: "scripts/reel_post.py"` breaks as `~/.hermes/scripts/scripts/reel_post.py` not found). The 18:00 reel job (7a4c465fbd09) must keep `script: "reel_post.py"`, which is the thin launcher at `~/.hermes/scripts/reel_post.py` that `os.chdir`s into the repo and `os.execv`s `scripts/reel_post.py`. Update the launcher, never the job's script field. (2026-08-11: job failed exactly this way; fixed via launcher.)
 - **Never run pool sims or the CLI against the production `logs/quote_pool_state.json`**. The `pick` CLI writes real assignments. A 30-day simulation run this way polluted the state with fake future dates — had to roll back (`assignments`/`used`/`history` surgical `pop`). Set `quote_pool.STATE_FILE` to a scratch path in test harnesses.
 - `tweets` are multi-line; comparing `caption.splitlines()[0]` to the full `tweet_text` field fails — use `tweet_text in caption` (in-substring).
 - JPEG adds ±1..3 LSB noise on "pure black" regions; if the check must be byte-exact, keep the frame PNG at every stage.

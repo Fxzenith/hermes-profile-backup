@@ -74,9 +74,14 @@ def main():
 
     rows = []
     for l in cues:
-        head, text = l.split(",", 5)[:2] or ("", ""), l.split(",,", 1)[1]
-        start_s, end_s = to_sec(l.split(",", 2)[1]), to_sec(l.split(",", 2)[2].split(",", 1)[0])
-        txt = re.sub(r"\{\\fad\([^)]*\)\}", "", text).strip()
+        # ASS Dialogue: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+        # The emitter writes "...Base,,0,0,{mv},,{text}" — split on 9 commas so
+        # Text (index 9) survives intact even when it contains commas/ASS tags.
+        parts = l.split(",", 9)
+        if len(parts) < 10:
+            continue
+        start_s, end_s = to_sec(parts[1]), to_sec(parts[2])
+        txt = re.sub(r"\{\\fad\([^)]*\)\}", "", parts[9]).strip()
         rows.append((start_s, end_s, txt))
 
     # Rule 3: first cue near clip start
@@ -101,9 +106,10 @@ def main():
     # Rule 2 sanity: last cue's words should be from the transcript near clip end
     tail_src = cs + rows[-1][0]
     near = [t for t in transcript if t.get("end", 0) > tail_src - 2 and t.get("start", 0) < tail_src + 2]
-    src_words = " ".join(t.get("text", "") for t in near).lower()[:80]
+    near_text = " ".join(t.get("text", "") for t in near).lower()
+    src_words = near_text[:80]  # display only
     cue_words = rows[-1][2].lower()
-    if any(w in src_words for w in cue_words.split()[:3]):
+    if any(w in near_text for w in cue_words.split()[:3]):
         print(f"PASS: last cue '{rows[-1][2][:50]}' matches transcript near {tail_src:.1f}s")
     else:
         print(f"FAIL: last cue '{rows[-1][2][:50]}' NOT found near source {tail_src:.1f}s "

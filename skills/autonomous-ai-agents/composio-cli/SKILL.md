@@ -65,6 +65,15 @@ composio connections list --toolkit <app>   # per-toolkit status (INITIALIZING �
 - **Hashtags in captions: pass literal `#` — do NOT HTML-URL-encode `%23`.** Verified live: Meta docs say to encode, but composio execute sends a JSON body and the account's captions render literal `#` fine. See references/instagram-hashtag-diet.md for the full rotation/tiering recipe.
 - **Licensed music on stories is impossible via API** — the app's music sticker is native-app only; the only audio field is `audio_name` (labels your original audio). No scheduler can attach a licensed track. Baked-in copyrighted audio gets muted by IG fingerprinting. See references/instagram-music-limits.md (what's IMPOSSIBLE) and references/instagram-reels-audio-sourcing.md (the pipeline is BUILT & LIVE since Aug 2026: user-supplied MP3s in `music/` are the primary source — archive.org Kevin MacLeod CC-BY mechanics verified but the user REJECTED it; Pixabay has NO music API. Reels = `media_type:"REELS"` + `video_file`, published by the 18:00 cron `7a4c465fbd09` via `scripts/reel_post.py`, **no image fallback** — parallel post, not a switch).
 
+## Hacker News-specific (verified live — full recipe in references/hackernews-top-stories.md)
+
+- Toolkit tools: `HACKERNEWS_GET_TOP_STORIES` (input `{"print":"pretty"}` → `data.story_ids`, the full 500-ID top list) and `HACKERNEWS_GET_ITEM` (input `{"id": <int>}` → title, url, score, descendants, by, time).
+- **No OAuth needed.** HN is a public API — `execute` runs on a server-side `consumer-*` userId; there is no account to link. `composio link hackernews` is a silent no-op (exit 0, empty output) — don't chase a connection status, HN just works.
+- **`composio search "hacker news"` does NOT find the HN toolkit** — it only surfaces the generic `composio_search` tools (COMPOSIO_SEARCH_NEWS etc.). Discover app tools by probing slugs directly: `composio execute HACKERNEWS_GET_TOP_STORIES --dry-run -d '{}'` — dry-run validates AND caches the schema to `~/.composio/tool_definitions/` (also works as a slug-existence probe: a failing slug is simply not found).
+- Top-stories → details loop: fetch the ID list, then one GET_ITEM per ID (script it via execute_code/subprocess; ~0.4s sleep between calls, 15 items ≈ 100s wall time — keep loops to a subset).
+- Slugs that don't exist (probed live, don't retry): `HACKERNEWS_GET_STORY`, `HACKERNEWS_SEARCH_STORIES`.
+- Parse `execute` stdout by walking to the first `{` — banner prose can precede the JSON.
+
 ## Pitfalls (all hit in practice — see references/pitfalls.md for transcripts)
 
 1. **PyPI `composio-core` is the LEGACY v2 SDK** (0.7.x, as of mid-2026). Its CLI hits deprecated endpoints: `composio login` fails with `{"error":"This endpoint is no longer available. Please upgrade to v3 APIs."}` and API-key validation returns **HTTP 410 Gone**. Do not install it for CLI use.

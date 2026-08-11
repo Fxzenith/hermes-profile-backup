@@ -3,6 +3,8 @@
 ## Overview
 The YT Clipper pipeline produces final videos in `/root/autoclipping/Outputs/` (per-platform variants: `_shorts.mp4`, `_tiktok.mp4`, `_reels.mp4`). This reference covers how to programmatically send those outputs to a Telegram channel using the Bot API.
 
+**Fastest path in an interactive Hermes session: native `MEDIA:` delivery.** To send clips straight into the current Telegram DM, just put `MEDIA:/absolute/path/to/clip.mp4` lines in the final response — Hermes delivers them as native video messages (no curl, no token, no chat ID needed). Use the Bot API flow below only for scheduled/headless/cron delivery or sending to a channel the session isn't attached to. Verified: two ~5–12MB clips delivered this way; videos under 50MB send fine.
+
 ## Bot Configuration
 
 The Telegram Bot Token is stored in **Hermes' .env** (`/root/.hermes/.env`) and the target chat ID is configured in **Hermes' config.yaml** (`/root/.hermes/config.yaml`):

@@ -21,6 +21,19 @@ Working on any automated "YouTube video → Short clips" pipeline: cutting clips
 ```
 Orchestrator: `main.js` (Node); `scripts/render.js` wraps the Python reframe. All Python runs via `uv run python` (uv venv; system pip is PEP 668-externally managed on this box). Subtitle engine is ASS + ffmpeg subtitles filter; clip scoring lives in `python/clip_selector.py`, grading report in `data/clips_quality.md`.
 
+### Headless run — bypass main.js's interactive gates
+`node main.js <url> --approve` still blocks on the `Press ENTER after clips have been selected...` readline gate — `--approve` does NOT skip it, and in a non-TTY it just exits there. For unattended runs (cron, agent, script), call the stage commands directly (they read/write the same `data/` files):
+
+```bash
+uv run python python/transcript.py --url "<URL>"   # → data/transcript.json
+# optionally: uv run python python/clip_selector.py --transcript data/transcript.json --out data/clips.json
+node scripts/extract.js "<URL>"                    # yt-dlp cut → assets/clip_NN.mp4
+node scripts/render.js                             # face-track reframe → Outputs/NN_slug.mp4
+node scripts/export.js                             # per-platform burns + end-cards
+```
+
+Order matters: render.js needs assets/ populated, export.js needs the reframe outputs. Clip count is flexible — `main.js` validation only requires ≥1 clip (≤20, ≤600s), so a 2-clip manifest passes fine; the "min 3 clips" rule lives only in `clip_selector.py`'s schema. If no LLM API key is available, skip the selector and write clips.json directly (the agent can pick clips from the transcript itself using the payoff/concrete scoring criteria below) — verified working end-to-end this session.
+
 ### Optional added stages (all config-gated, all verified working)
 - `scripts/export.js` — multi-platform publisher: burns a **safe-zone-aware** subtitle variant per platform (`_shorts/_tiktok/_reels`), optionally appends a CTA **end-card**, writes `data/titles.md` (A/B hooks) and `data/run_manifest.json` (resume). Replaces `main.js`'s inline `burnSubtitles` (step 6).
 - `scripts/endcard.js` — branded `Follow for more` tail (~1s) appended to a clip.
@@ -114,9 +127,11 @@ Extracting a specific frame (e.g. an end-card / subtitle check) on a concat or r
 - **Patching a raw-string regex through the patch tool can double-escape it.** `r"[$\\d]"` written in a source edit can land as `r"[$\\\\d]"` → literal backslash + `d`, *silently* no longer matching digits. After any patch to a regex, verify the actual on-disk content (read the line), not just that the diff applied. A broken `\d`/`\s` class fails silently (no exception — just never matches).
 - **Resume-mismatch: files per clip index vs the clips.json length.** `face_reframe`/`export` key outputs by `clips.json` index (0-based), but stale `NN_*.mp4` from an earlier run with *more* clips linger in Outputs. When clips shrink, the old high-index files stay and the manifest (written from the *current* clips) can't account for them. Clean stale `NN_*` before a new run, and don't trust old Outputs file names as ground truth — always start from `clips.json`.
 - **`uv sync` with pyannote/torch is a large install** but works headless. pyannote's `Pipeline.from_pretrained(use_auth_token=token)` may raise portability lint; wrap the whole diarization block in try/except so a token/dep failure degrades to the existing largest-face path instead of crashing the reframe.
+- **export.js default-platform burn skip (path collision) — FIXED 2026-08-11.** The default platform (no-suffix `Outputs/NN_slug.mp4`) uses the SAME path as the reframe output from render.js. The old Rule #12 resume check — "skip if output exists and is newer than input" — compared the file with itself (equal mtimes → always true), so the no-suffix "shorts" variant silently shipped as the RAW reframe with NO subtitles and NO end-card. Fix: export.js now burns non-default variants first, then the canonical default output LAST (so it can't clobber the reframe other platforms burn from), resuming it from the run manifest's recorded paths + `updatedAt` instead of mtime. Symptom to check anyway: `run_manifest.json` lists the no-suffix file `done` but its last frame is a speaker frame (~600KB+), not the ~15KB solid card. Verify with the frame-N-2 size probe.
+- **`verify_clip_sync.py` — FIXED 2026-08-11 (two bugs).** (1) Parser: the old code split the ASS line on `,,` and grabbed the header (`0,0,153,,It's`-style) instead of the actual words → false Rule 2 FAILs. Now parses `Dialogue` fields with `split(',', 9)` (Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text). (2) Match window: the Rule 2 check truncated the transcript window to the first 80 chars starting at the window head, so a correct tail cue (`low carb,` at 408.9s) could "not be found" when earlier words filled the 80-char budget. Now matches against the FULL window text (display stays truncated). If a FAIL still appears, trust the transcript text printed in the FAIL line: if the flagged words ARE present in the transcript window, the burn is correct.
 
 ## Support files
 - `scripts/verify_clip_sync.py` — dump + check ASS cue sync without burning (content matches source window, coverage, first-cue gap).
 - `references/ass-subtitle-sync.md` — deeper detail: ASS field semantics, clip-index resolution, missing-segment root cause, emitted-style validation.
 - `references/multiplatform-export-styled-captions.md` — platform-specific ASS margin calculations, emoji/keyword styling, end-card concat filter.
-- `references/telegram-distribution.md` — sending final clips to Telegram channel via Bot API; token extraction, chat ID config, curl patterns, pitfalls.
+- `references/telegram-distribution.md` — sending final clips to Telegram: native `MEDIA:` delivery for interactive sessions, Bot API curl for channel/cron; token extraction, chat ID config, pitfalls.
