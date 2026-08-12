@@ -1,6 +1,20 @@
 {
-  "updated_at": "2026-08-11T19:56:57.275172",
+  "updated_at": "2026-08-12T20:00:05.822889",
   "platforms": {
+    "discord": [
+      {
+        "id": "1525279559048626336",
+        "name": "atom101",
+        "guild": "MINDFLAYER",
+        "type": "channel"
+      },
+      {
+        "id": "1536898915901644890",
+        "name": "void",
+        "guild": "MINDFLAYER",
+        "type": "channel"
+      }
+    ],
     "telegram": [
       {
         "id": "6898985502",

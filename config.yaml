@@ -205,9 +205,12 @@ gateway:
   discord:
     application_id: 1476012207878836200
     dm_policy: open
-    enabled: false
+    enabled: true
     group_policy: open
     token: MTQ3NjAxMjIwNzg3ODgzNjMyNw.G0_QlZ.zHZkga7EV6XEepBf-sNfRCfcPX7x3YA7dTTFg8
+    allow_all_users: true
+    extra:
+      allow_all_users: true
   telegram:
     dm_policy: open
     enabled: true
