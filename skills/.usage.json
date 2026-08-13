@@ -456,6 +456,21 @@
     "use_count": 0,
     "view_count": 0
   },
+  "expert-knowledge": {
+    "archived_at": null,
+    "created_at": "2026-08-13T14:20:10.700343+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-13T14:20:10.708043+00:00",
+    "last_viewed_at": "2026-08-13T14:20:10.700410+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "findmy": {
     "archived_at": null,
     "created_at": "2026-08-05T09:54:32.876321+00:00",
@@ -473,16 +488,16 @@
     "archived_at": null,
     "created_at": "2026-07-31T12:05:09.001933+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-08-07T06:40:13.265400+00:00",
+    "last_patched_at": "2026-08-13T13:58:49.625287+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-11T07:49:09.989618+00:00",
-    "last_viewed_at": "2026-08-11T07:49:09.981670+00:00",
-    "patch_count": 2,
-    "patch_generation": 0,
+    "last_used_at": "2026-08-13T13:57:39.135610+00:00",
+    "last_viewed_at": "2026-08-13T13:57:39.128098+00:00",
+    "patch_count": 5,
+    "patch_generation": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 7,
+    "view_count": 7
   },
   "gbrain-nvidia-embeddings": {
     "archived_at": null,
@@ -687,15 +702,15 @@
     "created_at": "2026-08-12T00:43:13.485303+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-08-12T00:43:27.219939+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-12T00:43:36.173497+00:00",
-    "last_viewed_at": "2026-08-12T00:43:36.167134+00:00",
+    "last_reused_patch_generation": 1,
+    "last_used_at": "2026-08-13T11:26:36.985572+00:00",
+    "last_viewed_at": "2026-08-13T11:26:36.979405+00:00",
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "hermes-profile-backup": {
     "archived_at": null,
@@ -1147,14 +1162,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-11T16:14:09.479860+00:00",
-    "last_viewed_at": null,
+    "last_used_at": "2026-08-13T13:15:53.760831+00:00",
+    "last_viewed_at": "2026-08-13T13:15:53.752842+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 12,
-    "view_count": 0
+    "use_count": 17,
+    "view_count": 1
   },
   "polymarket": {
     "archived_at": null,
@@ -1418,13 +1433,45 @@
     "created_at": "2026-08-05T09:54:33.119628+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-13T13:37:43.348125+00:00",
+    "last_viewed_at": "2026-08-13T13:37:43.341937+00:00",
     "patch_count": 0,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
+  },
+  "tldraw-offline": {
+    "archived_at": null,
+    "created_at": "2026-08-13T14:43:04.685850+00:00",
+    "created_by": "installed",
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-13T15:19:41.498927+00:00",
+    "last_viewed_at": "2026-08-13T15:19:41.492950+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
+  "tldraw-remote-bridge": {
+    "archived_at": null,
+    "created_at": "2026-08-13T15:06:13.178673+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-08-13T15:42:27.770932+00:00",
+    "last_reused_patch_generation": 8,
+    "last_used_at": "2026-08-13T15:42:32.635662+00:00",
+    "last_viewed_at": "2026-08-13T15:42:32.626205+00:00",
+    "patch_count": 8,
+    "patch_generation": 8,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
   },
   "touchdesigner-mcp": {
     "archived_at": null,
@@ -1501,13 +1548,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-08T00:43:23.439225+00:00",
-    "last_viewed_at": "2026-08-08T00:43:23.434383+00:00",
+    "last_used_at": "2026-08-13T14:16:45.481461+00:00",
+    "last_viewed_at": "2026-08-13T14:16:45.472982+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
   }
 }

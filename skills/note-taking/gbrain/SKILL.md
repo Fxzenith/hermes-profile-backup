@@ -35,9 +35,12 @@ Verify: `gbrain search "<keyword>"` returns the new slug with a score. Good note
 gbrain search "<term>"          # raw ranked pages: [score] slug -- title. Score present = vector search live.
 gbrain get <slug>               # full note content (e.g. inbox/2026-08-07-1e17dc07)
 ```
-**Known limitation**: `gbrain think "question"` (synthesized prose answer) silently returns "no LLM available — set ANTHROPIC_API_KEY" on this machine. Do NOT rely on it. Use `gbrain search` + read the top page yourself and summarize; that works headless with zero extra keys.
+**Known limitation**: `gbrain think "question"` (synthesized prose answer) silently returns "no LLM available — set ANTHROPIC_API_KEY" on this machine. Do NOT rely on it. **Also**: `gbrain query` (hybrid/semantic) returns "No results" when embeddings are absent — the configured model `nvidia:llama-nemotron-embed-vl-1b-v2` needs `NVIDIA_API_KEY`, which is unset here, so `gbrain embed --all` aborts. **Use `gbrain search` (tsvector keyword) instead** — it works headless with zero keys and returns `[score] slug -- title`. Then `gbrain get <slug>` for full content. This is the retrieval path for ANY query on this box (incl. expert-knowledge lookups — see `references/expert-knowledge.md`).
 
 **Routing rule**: when the user asks a knowledge question and this skill is loaded, gbrain is the FIRST source — check it before web search. Web search is often broken on this box (Firecrawl auth failures). If gbrain search returns nothing relevant, then say so and offer web search.
+
+## Expert Profiles (Advisory Council pattern)
+To answer "what would Alex Hormozi do?" style questions, store expert knowledge as GBrain pages — NOT a separate expert database (user's hard rule: GBrain is the single source of truth; extend its schema, never duplicate). Convention + retrieval workflow: `references/expert-knowledge.md`. Summary: expert index = `person` page at `experts/<slug>/profile`; each principle/framework = `atom` page with `expert`/`topic`/`ktype`/`principle`/`source_*`/`confidence` frontmatter. Retrieve via `gbrain search` + `gbrain get`. Always separate **direct knowledge** (expert explicitly taught — cite `source_title`) from **application/inference** (Hermes' reasoning); never impersonate the expert or fabricate sources/quotes.
 
 ## Verify / baseline
 - `gbrain doctor` — health report. Healthy: "Overall health score: N/100. All checks OK". Key lines: `embed_staleness: No stale chunks`, `embedding_width_consistency: Schema width (Nd) matches gateway embedding_dimensions`, `schema_version` current.

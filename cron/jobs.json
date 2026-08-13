@@ -22,22 +22,22 @@
       "schedule_display": "0 11 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-08T03:39:07.769807+02:00",
-      "next_run_at": "2026-08-13T11:00:00+02:00",
-      "last_run_at": "2026-08-12T11:05:25.084536+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-14T11:00:00+02:00",
+      "last_run_at": "2026-08-13T12:45:30.296287+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day",
       "last_delivery_error": null,
       "deliver": "telegram:-1003938786142",
       "origin": null,
       "enabled_toolsets": null,
-      "workdir": "/root/Instagram daily auto-post",
+      "workdir": "/root/projects/Instagram daily auto-post",
       "fire_claim": null
     },
     {
@@ -62,15 +62,15 @@
       "schedule_display": "0 12,14,16,18,20,22 * * *",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 29
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T09:23:17.735622+02:00",
-      "next_run_at": "2026-08-12T22:00:00+02:00",
-      "last_run_at": "2026-08-12T18:01:06.597614+02:00",
+      "next_run_at": "2026-08-14T12:00:00+02:00",
+      "last_run_at": "2026-08-13T22:01:04.993328+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -108,17 +108,17 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T14:51:13.633845+02:00",
-      "next_run_at": "2026-08-13T18:00:00+02:00",
-      "last_run_at": "2026-08-12T18:02:14.279488+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-14T18:00:00+02:00",
+      "last_run_at": "2026-08-13T18:00:05.072516+02:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 4\nstderr:\nreel_post.py launcher: target missing: /root/Instagram daily auto-post/scripts/reel_post.py",
       "last_delivery_error": null,
       "deliver": "telegram:-1003938786142",
       "origin": {
@@ -132,7 +132,7 @@
         "terminal",
         "file"
       ],
-      "workdir": "/root/Instagram daily auto-post",
+      "workdir": "/root/projects/Instagram daily auto-post",
       "fire_claim": null
     },
     {
@@ -157,15 +157,15 @@
       "schedule_display": "*/5 * * * *",
       "repeat": {
         "times": null,
-        "completed": 881
+        "completed": 1056
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T18:41:23.517357+02:00",
-      "next_run_at": "2026-08-12T20:05:00+02:00",
-      "last_run_at": "2026-08-12T20:00:12.410170+02:00",
+      "next_run_at": "2026-08-14T01:30:00+02:00",
+      "last_run_at": "2026-08-14T01:25:21.648185+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -203,17 +203,17 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T09:10:25.108031+02:00",
-      "next_run_at": "2026-08-13T20:00:00+02:00",
-      "last_run_at": "2026-08-11T20:00:44.712988+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-14T20:00:00+02:00",
+      "last_run_at": "2026-08-13T20:00:20.419560+02:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 128\nstderr:\nfatal: not a git repository (or any of the parent directories): .git",
       "last_delivery_error": null,
       "deliver": "telegram:6898985502",
       "origin": null,
@@ -261,5 +261,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-12T20:00:12.411143+02:00"
+  "updated_at": "2026-08-14T01:25:21.651099+02:00"
 }

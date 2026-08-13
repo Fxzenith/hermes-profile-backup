@@ -1,6 +1,8 @@
 model:
   default: deepseek-v4-flash-free
   provider: opencode-zen
+credential_pool_strategies:
+  nvidia: round_robin
 agent:
   max_turns: 150
   personalities:
@@ -53,6 +55,10 @@ terminal:
   container_persistent: true
   docker_mount_cwd_to_workspace: false
   lifetime_seconds: 300
+web:
+  backend: ddgs
+  search_backend: ddgs
+  extract_backend: firecrawl
 browser:
   inactivity_timeout: 120
   cloud_provider: firecrawl
@@ -108,9 +114,9 @@ display:
   skin: default
   interim_assistant_messages: true
   pet:
-    enabled: false
-    slug: ''
-    scale: 0.33
+    enabled: true
+    slug: homelander
+    scale: 0.35
   background_process_notifications: all
   busy_ack_detail: true
   cleanup_progress: false
@@ -132,14 +138,16 @@ stt:
     model: whisper-1
 voice:
   auto_tts: false
+wake_word:
+  enabled: false
 memory:
   memory_enabled: true
   user_profile_enabled: true
   memory_char_limit: 800
   user_char_limit: 3000
+  provider: gbrain
   flush_min_turns: 6
   nudge_interval: 10
-  provider: gbrain
 delegation:
   max_iterations: 50
   max_concurrent_children: 5
@@ -323,11 +331,19 @@ mcp_servers:
     auth: oauth
     timeout: 180
     connect_timeout: 60
-wake_word:
-  enabled: false
-credential_pool_strategies:
-  nvidia: round_robin
-web:
-  backend: ddgs
-  search_backend: ddgs
-  extract_backend: firecrawl
+
+# ── Security ──────────────────────────────────────────────────────────
+# Secret redaction is ON by default — strings that look like API keys,
+# tokens, and passwords are masked in tool output, logs, and chat
+# responses before the model or user ever sees them. Set redact_secrets
+# to false to disable (e.g. when developing the redactor itself).
+# tirith pre-exec scanning is enabled by default when the tirith binary
+# is available. Configure via security.tirith_* keys or env vars
+# (TIRITH_ENABLED, TIRITH_BIN, TIRITH_TIMEOUT, TIRITH_FAIL_OPEN).
+#
+# security:
+#   redact_secrets: true
+#   tirith_enabled: true
+#   tirith_path: "tirith"
+#   tirith_timeout: 5
+#   tirith_fail_open: true

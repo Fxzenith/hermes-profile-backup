@@ -1,0 +1,753 @@
+HERMES_BACKEND_READY port=32969
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: nvidia  Model: minimaxai/minimax-m3
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 429: {"status":429,"title":"Too Many Requests"}
+   📋 Details: {'status': 429, 'title': 'Too Many Requests'}
+   ⏱️  Elapsed: 0.99s  Context: 22 msgs, ~23,325 tokens
+⏱️ Rate limited. Waiting 2.6s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: nvidia  Model: minimaxai/minimax-m3
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 429: {"status":429,"title":"Too Many Requests"}
+   📋 Details: {'status': 429, 'title': 'Too Many Requests'}
+   ⏱️  Elapsed: 4.66s  Context: 22 msgs, ~23,325 tokens
+⚠️ Rate limited — switching to fallback provider...
+🔄 Primary model failed — switching to fallback: openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 5.43s  Context: 22 msgs, ~23,325 tokens
+⏱️ Rate limited. Waiting 2.8s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 8.68s  Context: 22 msgs, ~23,325 tokens
+⏱️ Rate limited. Waiting 5.8s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 14.77s  Context: 22 msgs, ~23,325 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+⚠️  API call failed (attempt 1/3): AuthenticationError [HTTP 401]
+   🔌 Provider: opencode  Model: glm-5.2
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 401: No payment method. Add a payment method here: https://opencode.ai/workspace/wrk_01KYVVHC8TS3FR6XJYGJGSDNJP/billing
+   📋 Details: {'type': 'CreditsError', 'message': 'No payment method. Add a payment method here: https://opencode.ai/workspace/wrk_01KYVVHC8TS3FR6XJYGJGSDNJP/billing'}
+   ⏱️  Elapsed: 1.17s  Context: 18 msgs, ~19,057 tokens
+❌ Non-retryable error (HTTP 401): HTTP 401: No payment method. Add a payment method here: https://opencode.ai/workspace/wrk_01KYVVHC8TS3FR6XJYGJGSDNJP/billing
+❌ Non-retryable client error (HTTP 401). Aborting.
+   🔌 Provider: opencode  Model: glm-5.2
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   💡 Your API key was rejected by the provider. Check:
+      • Is the key valid? Run: hermes setup
+      • Does your account have access to glm-5.2?
+⚡ Interrupted during API call.
+⚠️  API call failed (attempt 1/3): NotFoundError [HTTP 404]
+   🔌 Provider: nvidia  Model: deepseek-ai/deepseek-coder-6.7b-instruct
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   📋 Details: {'status': 404, 'title': 'Not Found', 'detail': "Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   ⏱️  Elapsed: 1.12s  Context: 24 msgs, ~27,579 tokens
+⏳ Retrying in 2.4s (attempt 1/3)...
+⚠️  API call failed (attempt 2/3): NotFoundError [HTTP 404]
+   🔌 Provider: nvidia  Model: deepseek-ai/deepseek-coder-6.7b-instruct
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   📋 Details: {'status': 404, 'title': 'Not Found', 'detail': "Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   ⏱️  Elapsed: 4.86s  Context: 24 msgs, ~27,579 tokens
+⏳ Retrying in 5.0s (attempt 2/3)...
+⚠️  API call failed (attempt 3/3): NotFoundError [HTTP 404]
+   🔌 Provider: nvidia  Model: deepseek-ai/deepseek-coder-6.7b-instruct
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   📋 Details: {'status': 404, 'title': 'Not Found', 'detail': "Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   ⏱️  Elapsed: 11.20s  Context: 24 msgs, ~27,579 tokens
+❌ API failed after 3 retries — HTTP 404: {"status":404,"title":"Not Found","detail":"Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   💀 Final error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function 'e503b15c-62b0-4d69-b532-a88f0bfa2656': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+⚠️  API call failed (attempt 1/3): NotFoundError [HTTP 404]
+   🔌 Provider: nvidia  Model: moonshotai/kimi-k2.6
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   📋 Details: {'status': 404, 'title': 'Not Found', 'detail': "Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   ⏱️  Elapsed: 1.12s  Context: 24 msgs, ~27,294 tokens
+⏳ Retrying in 2.9s (attempt 1/3)...
+⚠️  API call failed (attempt 2/3): NotFoundError [HTTP 404]
+   🔌 Provider: nvidia  Model: moonshotai/kimi-k2.6
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   📋 Details: {'status': 404, 'title': 'Not Found', 'detail': "Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   ⏱️  Elapsed: 5.23s  Context: 24 msgs, ~27,294 tokens
+⏳ Retrying in 4.3s (attempt 2/3)...
+⚠️  API call failed (attempt 3/3): NotFoundError [HTTP 404]
+   🔌 Provider: nvidia  Model: moonshotai/kimi-k2.6
+   🌐 Endpoint: https://integrate.api.nvidia.com/v1
+   📝 Error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   📋 Details: {'status': 404, 'title': 'Not Found', 'detail': "Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   ⏱️  Elapsed: 10.75s  Context: 24 msgs, ~27,294 tokens
+❌ API failed after 3 retries — HTTP 404: {"status":404,"title":"Not Found","detail":"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+   💀 Final error: HTTP 404: {"status":404,"title":"Not Found","detail":"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '4j6yxSvZqwS8_LXNtg9n3N9oNwTxdakzY0dRvZvmNzI'"}
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+⚠️  API call failed (attempt 1/3): GeminiAPIError [HTTP 429]
+   🔌 Provider: gemini  Model: gemini-3.5-flash-lite
+   🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+   📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 250000, model: gemini-3.5-flash-lite
+Please retry in 28.649667802s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   ⏱️  Elapsed: 0.98s  Context: 20 msgs, ~35,080 tokens
+⚠️ Rate limited — switching to fallback provider...
+🔄 Primary model failed — switching to fallback: openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 1.76s  Context: 20 msgs, ~35,080 tokens
+⏱️ Rate limited. Waiting 2.1s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 4.27s  Context: 20 msgs, ~35,080 tokens
+⏱️ Rate limited. Waiting 4.7s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 9.47s  Context: 20 msgs, ~35,080 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 0.30s  Context: 12 msgs, ~29,764 tokens
+⏱️ Rate limited. Waiting 2.8s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 3.39s  Context: 12 msgs, ~29,764 tokens
+⏱️ Rate limited. Waiting 4.3s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 8.08s  Context: 12 msgs, ~29,764 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+  Hermes backend listening on 127.0.0.1:32969
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "a9119db6", "stored_session_id": "20260813_112809_d28f7a", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+⚡ Interrupted during API call.
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "a4c10f70", "stored_session_id": "20260813_112809_d28f7a", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+⚠️  Response truncated (finish_reason='length') - model hit max output tokens
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+⚡ Interrupted during API call.
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+⚡ Interrupted during API call.
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+⚠️  API call failed (attempt 1/3): GeminiAPIError [HTTP 429]
+   🔌 Provider: gemini  Model: gemini-3-flash-preview
+   🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+   📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3-flash
+Please retry in 54.716032225s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   ⏱️  Elapsed: 0.70s  Context: 18 msgs, ~15,845 tokens
+⚠️ Rate limited — switching to fallback provider...
+🔄 Primary model failed — switching to fallback: openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 1.32s  Context: 18 msgs, ~15,845 tokens
+⏱️ Rate limited. Waiting 2.4s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 4.36s  Context: 18 msgs, ~15,845 tokens
+⏱️ Rate limited. Waiting 4.4s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 9.21s  Context: 18 msgs, ~15,845 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+[subagent-0] ⚠️  API call failed (attempt 1/3): GeminiAPIError [HTTP 429]
+[subagent-0]    🔌 Provider: gemini  Model: gemini-3.6-flash
+[subagent-0]    🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+[subagent-0]    📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 39.990713662s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+[subagent-0]    ⏱️  Elapsed: 0.62s  Context: 8 msgs, ~11,491 tokens
+[subagent-0] ⏱️ Rate limited. Waiting 2.7s (attempt 2/3)...
+[subagent-0] ⚠️  API call failed (attempt 2/3): GeminiAPIError [HTTP 429]
+[subagent-0]    🔌 Provider: gemini  Model: gemini-3.6-flash
+[subagent-0]    🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+[subagent-0]    📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 36.339237417s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+[subagent-0]    ⏱️  Elapsed: 4.27s  Context: 8 msgs, ~11,491 tokens
+[subagent-0] ⏱️ Rate limited. Waiting 4.4s (attempt 3/3)...
+[subagent-0] ⚠️  API call failed (attempt 3/3): GeminiAPIError [HTTP 429]
+[subagent-0]    🔌 Provider: gemini  Model: gemini-3.6-flash
+[subagent-0]    🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+[subagent-0]    📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 31.087781358s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+[subagent-0]    ⏱️  Elapsed: 9.53s  Context: 8 msgs, ~11,491 tokens
+[subagent-0] ❌ Rate limited after 3 retries — Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 31.087781358s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+[subagent-0]    💀 Final error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 31.087781358s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+⚠️  API call failed (attempt 1/3): GeminiAPIError [HTTP 429]
+   🔌 Provider: gemini  Model: gemini-3.6-flash
+   🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+   📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 29.561850483s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   ⏱️  Elapsed: 0.91s  Context: 24 msgs, ~17,924 tokens
+⏱️ Rate limited. Waiting 2.1s (attempt 2/3)...
+⚠️  API call failed (attempt 1/3): GeminiAPIError [HTTP 429]
+   🔌 Provider: gemini  Model: gemini-3.6-flash
+   🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+   📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 19.693842893s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   ⏱️  Elapsed: 0.81s  Context: 26 msgs, ~18,088 tokens
+⏱️ Rate limited. Waiting 2.4s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): GeminiAPIError [HTTP 429]
+   🔌 Provider: gemini  Model: gemini-3.6-flash
+   🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+   📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 16.325540302s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   ⏱️  Elapsed: 4.19s  Context: 26 msgs, ~18,088 tokens
+⏱️ Rate limited. Waiting 4.9s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): GeminiAPIError [HTTP 429]
+   🔌 Provider: gemini  Model: gemini-3.6-flash
+   🌐 Endpoint: https://generativelanguage.googleapis.com/v1beta
+   📝 Error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 10.310134666s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   ⏱️  Elapsed: 10.21s  Context: 26 msgs, ~18,088 tokens
+❌ Rate limited after 3 retries — Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 10.310134666s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+   💀 Final error: Gemini HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 10.310134666s.
+
+Your Google API key is on the free tier (a few hundred requests/day for Gemini Flash models). Hermes typically makes 3-10 API calls per user turn, so the free tier is exhausted in a handful of messages and cannot sustain an agent session. Enable billing on your Google Cloud project and regenerate the key in a billing-enabled project: https://aistudio.google.com/apikey
+⚡ Interrupted during API call.
+🗜️ Compacting context — summarizing earlier conversation so I can continue...
+⚡ Interrupted during API call.
+⚡ Interrupted during API call.
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+⚡ Interrupted during API call.
+⚡ Interrupted during API call.
+⚡ Interrupted during API call.
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: opencode  Model: deepseek-v4-flash-free
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+   📋 Details: {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}
+   ⏱️  Elapsed: 1.81s  Context: 82 msgs, ~53,112 tokens
+⏱️ Rate limited. Waiting 2.1s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: opencode  Model: deepseek-v4-flash-free
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+   📋 Details: {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}
+   ⏱️  Elapsed: 5.80s  Context: 82 msgs, ~53,112 tokens
+⏱️ Rate limited. Waiting 5.2s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: opencode  Model: deepseek-v4-flash-free
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+   📋 Details: {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}
+   ⏱️  Elapsed: 13.03s  Context: 82 msgs, ~53,112 tokens
+❌ Rate limited after 3 retries — HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+   💀 Final error: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+  💾 Self-improvement review: User profile updated · Patched SKILL.md in skill 'gbrain' (1 replacement).
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: opencode-zen  Model: mimo-v2.5-free
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+   📋 Details: {'type': 'FreeUsageLimitError', 'message': 'Error from provider (Console): Rate limit exceeded. Please try again later.'}
+   ⏱️  Elapsed: 1.42s  Context: 2 msgs, ~7,834 tokens
+⚠️ Rate limited — switching to fallback provider...
+🔄 Primary model failed — switching to fallback: openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 2.15s  Context: 2 msgs, ~7,834 tokens
+⏱️ Rate limited. Waiting 2.6s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 5.01s  Context: 2 msgs, ~7,834 tokens
+⏱️ Rate limited. Waiting 5.0s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786665600000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 10.42s  Context: 2 msgs, ~7,834 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+⚠ Auxiliary title generation failed: HTTP 429: Error from provider (Console): Rate limit exceeded. Please try again later.
+⚡ Interrupted during API call.
+📦 Preflight compression: ~148,768 tokens >= 142,500 threshold. This may take a moment.
+🗜️ Compacting context — summarizing earlier conversation so I can continue...
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "759f0465", "stored_session_id": "20260813_160829_60f721", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "6173e4a1", "stored_session_id": "20260813_133641_dba914", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "4d3fe08a", "stored_session_id": "20260813_125930_fe29e1", "reason": "idle_timeout"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
