@@ -751,3 +751,10 @@ Your Google API key is on the free tier (a few hundred requests/day for Gemini F
 {"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
 {"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
 {"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
