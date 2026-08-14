@@ -1,0 +1,11 @@
+{
+  "slug": "default",
+  "name": "Default",
+  "description": "",
+  "icon": "",
+  "color": "",
+  "default_workdir": "/root/autoclipping",
+  "project_id": "p_cf60b51f",
+  "created_at": 1786181085,
+  "archived": false
+}

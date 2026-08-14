@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-08-14T01:39:04.956340",
+  "platforms": {
+    "discord": [
+      {
+        "id": "1525279559048626336",
+        "name": "atom101",
+        "guild": "MINDFLAYER",
+        "type": "channel"
+      },
+      {
+        "id": "1536898915901644890",
+        "name": "void",
+        "guild": "MINDFLAYER",
+        "type": "channel"
+      }
+    ],
+    "telegram": [
+      {
+        "id": "6898985502",
+        "name": "Ze Nith",
+        "type": "dm",
+        "thread_id": null
+      },
+      {
+        "id": "-1003938786142",
+        "name": "CONFERENCE ROOM",
+        "type": "group",
+        "thread_id": null
+      }
+    ]
+  }
+}

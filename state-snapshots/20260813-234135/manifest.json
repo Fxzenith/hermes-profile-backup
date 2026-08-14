@@ -1,0 +1,27 @@
+{
+  "id": "20260813-234135",
+  "timestamp": "20260813-234135",
+  "label": null,
+  "file_count": 16,
+  "total_size": 55592056,
+  "files": {
+    "state.db": 54657024,
+    "config.yaml": 9656,
+    ".env": 24979,
+    "auth.json": 3308,
+    "cron/jobs.json": 15030,
+    "cron/executions.db": 606208,
+    "gateway_state.json": 556,
+    "channel_directory.json": 644,
+    "processes.json": 2,
+    "projects.db": 45056,
+    "verification_evidence.db": 77824,
+    "kanban.db": 139264,
+    "kanban/boards/*.db": 4096,
+    "kanban/boards/default/board.json": 217,
+    "kanban/boards/default/*.db": 4096,
+    "kanban/boards/default/kanban.db": 4096
+  },
+  "failed_dbs": [],
+  "oversized_skipped": []
+}

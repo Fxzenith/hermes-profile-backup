@@ -15,21 +15,38 @@ git init -b main && git remote add origin https://github.com/Fxzenith/hermes-pro
 git commit --allow-empty -m "chore: init backup repo"
 ```
 
-## backup_profile.sh (daily — verified)
+## backup_profile.sh (daily — verified, self-healing)
 
 Excludes: regenerable dirs, SQLite sidecars, AND repo metadata (`.git/`, `.gitignore`, `README.md`, `MANIFEST.md`) — the metadata excludes are what keep `rsync --delete` from destroying the repo it backs into.
 
+Emits a result line on EVERY run and always `exit 0` so the cron delivers it to Telegram (user wants results every run, not only on failure). Mid-step failures print `❌ FAILED` + reason instead of crashing so the message stays clean.
+
 ```bash
 #!/usr/bin/env bash
-set -euo pipefail
+# Hermes profile backup: snapshot -> commit -> push. Emits a result line on EVERY run.
+set -uo pipefail
 SRC="$HOME/.hermes"
 DST="${BACKUP_DEST:-$HOME/hermes-profile-backup}"
 LOG="${BACKUP_LOG:-$HOME/.hermes/logs/backup_profile.log}"
+REMOTE="${BACKUP_REMOTE:-https://github.com/Fxzenith/hermes-profile-backup.git}"
+NOW="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 mkdir -p "$DST" "$(dirname "$LOG")"
-log() { echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] $*" >> "$LOG"; }
+log() { echo "[$NOW] $*" >> "$LOG"; }
+fail() { echo "❌ Hermes profile backup FAILED ($NOW): $*"; log "FAILED: $*"; exit 0; }
+
+# 0. Self-heal: ensure DST is a git repo (clone from remote if .git missing).
+if [ ! -d "$DST/.git" ]; then
+  tmp="${DST}.clone.$$"
+  if git clone -q "$REMOTE" "$tmp" 2>"$LOG.cloneerr"; then
+    rm -rf "$DST"; mv "$tmp" "$DST"; log "DST reinitialized from $REMOTE"
+  else
+    fail "DST $DST is not a git repo and clone of $REMOTE failed: $(tail -1 "$LOG.cloneerr" 2>/dev/null)"
+  fi
+fi
+cd "$DST" || fail "cannot cd into $DST"
 
 # 1. Consistent snapshot of the live SQLite session store (WAL-safe online backup API)
-sqlite3 "$SRC/state.db" ".backup '$DST/state.db'"
+sqlite3 "$SRC/state.db" ".backup '$DST/state.db'" || fail "sqlite3 state.db snapshot failed"
 
 # 2. Mirror everything else, excluding regenerable data + repo metadata
 rsync -a --delete \
@@ -41,21 +58,36 @@ rsync -a --delete \
   --exclude='provider_models_cache.json' --exclude='.update_check' \
   --exclude='.mcp-discovery.lock' --exclude='processes.json' \
   --exclude='.git/' --exclude='.gitignore' --exclude='README.md' --exclude='MANIFEST.md' \
-  "$SRC/" "$DST/"
+  "$SRC/" "$DST/" || fail "rsync mirror failed"
 
 # 3. Commit + push only when something changed
-cd "$DST"
 git add -A
 if git diff --cached --quiet; then
-  log "no changes, skipping"
-  exit 0                                    # empty stdout = no_agent cron stays silent
+  echo "✅ Hermes profile backup OK ($NOW): no changes since last backup."
+  log "no changes, skipping"; exit 0
 fi
-git commit -q -m "backup: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-git push -q origin HEAD
-log "committed and pushed"
+git commit -q -m "backup: $NOW" || fail "git commit failed"
+git push -q origin HEAD || fail "git push failed"
+N=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | wc -l | tr -d ' ')
+echo "✅ Hermes profile backup OK ($NOW): committed + pushed $N file(s) -> ${REMOTE##*/}"
+log "committed and pushed $N file(s)"
 ```
 
-Run manually: `BACKUP_DEST=... ~/.hermes/scripts/backup_profile.sh`. Result size: ~226 MB (state.db 41 MB + skills 51 MB + checkpoints 43 MB + rest).
+Run manually: `BACKUP_DEST=... ~/.hermes/scripts/backup_profile.sh`. Result size: ~909 MB working tree (state.db 51 MB + skills/checkpoints + rest).
+
+### Incident 2026-08-13 — cron FAILED: "fatal: not a git repository (or any of the parent directories): .git"
+
+Symptom: daily `hermes-profile-backup-daily` cron exited 128, stderr `fatal: not a git repository`.
+
+Cause (repo-drift): the script default `DST=~/hermes-profile-backup` was a **plain rsync mirror with no `.git`**. The actual git repo (`.git`, history, GitHub remote) had been created at a different path — `/root/projects/hermes-profile-backup` — while a separate non-git mirror sat at the canonical path the script targets. An Aug 13 run rsynced fresh data into the non-git copy; the subsequent `git add` then crashed. Two duplicate copies existed plus a stale `.bak`.
+
+Fix applied:
+1. Moved the broken non-git mirror aside, then `git clone <remote> /root/hermes-profile-backup` into the canonical path (pulled history + remote + `.git`).
+2. Removed the orphaned `/root/projects/hermes-profile-backup` and the `.bak` so there is a single source of truth.
+3. Rewrote the script with the self-heal guard above and the always-emit-result `exit 0` behavior.
+4. Verified: first run committed 4804 files + pushed; subsequent runs idempotent; cron still resolves `backup_profile.sh` from `~/.hermes/scripts/`.
+
+Lesson: when a `DST` git failure appears, first confirm which directory the script actually uses (`BACKUP_DEST` default) is the real repo, and check for stray duplicate clones at other paths before assuming the script is wrong.
 
 ## monthly_full_backup.sh (gh release with retention)
 
