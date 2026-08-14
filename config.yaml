@@ -1,5 +1,5 @@
 model:
-  default: deepseek-v4-flash-free
+  default: hy3-free
   provider: opencode-zen
 credential_pool_strategies:
   nvidia: round_robin
@@ -106,7 +106,7 @@ auxiliary:
     model: deepseek-v4-flash-free
 display:
   compact: false
-  personality: helpful
+  personality: ''
   busy_input_mode: interrupt
   bell_on_complete: false
   show_reasoning: false
@@ -130,6 +130,7 @@ dashboard:
   font: theme
 tts:
   use_gateway: false
+  provider: edge
 stt:
   enabled: true
   local:
@@ -238,7 +239,7 @@ updates:
   pre_update_backup: false
   backup_keep: 5
   non_interactive_local_changes: stash
-_config_version: 33
+_config_version: 34
 group_sessions_per_user: true
 known_plugin_toolsets:
   cli:
@@ -319,6 +320,7 @@ plugins:
   enabled:
     - browser-browser-use
     - disk-cleanup
+    - gbrain
   disabled: []
 mcp_servers:
   latitude:
