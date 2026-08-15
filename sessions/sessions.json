@@ -2,9 +2,9 @@
   "_README": "LEGACY MIRROR of the gateway routing index (the primary copy lives in the gateway_routing table in ~/.hermes/state.db). Maps messaging session keys (agent:main:<platform>:...) to active session IDs. This is NOT the session list. ALL sessions (CLI, TUI, and gateway) live in ~/.hermes/state.db and are shown by `hermes sessions list` and `/sessions`. Disable this file with `gateway.write_sessions_json: false` in config.yaml.",
   "agent:main:telegram:dm:6898985502": {
     "session_key": "agent:main:telegram:dm:6898985502",
-    "session_id": "20260814_012119_149f6c4e",
-    "created_at": "2026-08-14T01:21:19.487335",
-    "updated_at": "2026-08-14T03:16:35.657163",
+    "session_id": "20260815_035442_c7e11ac6",
+    "created_at": "2026-08-15T03:54:42.794023",
+    "updated_at": "2026-08-15T03:54:42.794023",
     "display_name": "Ze Nith",
     "platform": "telegram",
     "chat_type": "dm",
@@ -14,10 +14,10 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 43650,
+    "last_prompt_tokens": 0,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
-    "expiry_finalized": true,
+    "expiry_finalized": false,
     "suspended": false,
     "resume_pending": false,
     "resume_reason": null,
@@ -25,10 +25,10 @@
     "active_turn_token": null,
     "active_turn_started_at": null,
     "is_fresh_reset": false,
-    "was_auto_reset": false,
-    "auto_reset_reason": null,
+    "was_auto_reset": true,
+    "auto_reset_reason": "idle",
     "reset_had_activity": true,
-    "prev_session_id": "20260813_184619_38a91e74",
+    "prev_session_id": "20260814_012119_149f6c4e",
     "origin": {
       "platform": "telegram",
       "chat_id": "6898985502",
@@ -38,7 +38,7 @@
       "user_name": "Ze Nith",
       "thread_id": null,
       "chat_topic": null,
-      "message_id": "5309"
+      "message_id": "5480"
     }
   }
 }
