@@ -321,6 +321,10 @@
       1783722522644879037,
       2336
     ],
+    "messaging/telegram-delivery/SKILL.md": [
+      1786797087640641773,
+      3543
+    ],
     "social-media/DESCRIPTION.md": [
       1783722522681882342,
       151
@@ -1548,6 +1552,19 @@
         "macos",
         "windows"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "telegram-delivery",
+      "category": "messaging",
+      "frontmatter_name": "telegram-delivery",
+      "description": "Send files to Telegram using the existing Hermes bot token.",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],
