@@ -106,5 +106,11 @@
     "timestamp": "2026-08-14T00:02:37.986897+00:00",
     "category": "temp",
     "size": 0
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1786955867-bcdc7952.sh",
+    "timestamp": "2026-08-17T08:37:47.163147+00:00",
+    "category": "temp",
+    "size": 575
   }
 ]

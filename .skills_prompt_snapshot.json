@@ -93,6 +93,10 @@
       1786233917181171703,
       4501
     ],
+    "hormozi-advisor/SKILL.md": [
+      1786964875617108886,
+      1704
+    ],
     "latitude-telemetry/SKILL.md": [
       1785499820167559599,
       25090
@@ -290,8 +294,8 @@
       5514
     ],
     "hermes/hermes-gateway-ops/SKILL.md": [
-      1786495393467218097,
-      5348
+      1786961712329714117,
+      6117
     ],
     "hermes/kanban-task-tracking/SKILL.md": [
       1786456676686581990,
@@ -356,6 +360,10 @@
     "expert-knowledge/SKILL.md": [
       1786629679693369042,
       5466
+    ],
+    "jfx-journal/SKILL.md": [
+      1786804876284012472,
+      1306
     ],
     "productivity/DESCRIPTION.md": [
       1783722522650879573,
@@ -529,9 +537,17 @@
       1785499730007443202,
       5637
     ],
+    "note-taking/gbrain-rag-bot/SKILL.md": [
+      1786965119460105717,
+      6446
+    ],
     "note-taking/gbrain/SKILL.md": [
       1786629529580847677,
       7651
+    ],
+    "note-taking/gbrain-advisor-bot/SKILL.md": [
+      1786952940364751126,
+      4134
     ]
   },
   "skills": [
@@ -1440,6 +1456,32 @@
       }
     },
     {
+      "skill_name": "hormozi-advisor",
+      "category": "hormozi-advisor",
+      "frontmatter_name": "hormozi-advisor",
+      "description": "Use when the user wants Alex Hormozi advice, drafts, or b...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "jfx-journal",
+      "category": "jfx-journal",
+      "frontmatter_name": "jfx-journal",
+      "description": "Use the JFX Journal API to answer questions about the use...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "latitude-cli",
       "category": "latitude-cli",
       "frontmatter_name": "latitude-cli",
@@ -1673,6 +1715,19 @@
       }
     },
     {
+      "skill_name": "gbrain-advisor-bot",
+      "category": "note-taking",
+      "frontmatter_name": "gbrain-advisor-bot",
+      "description": "Build a grounded RAG advisor bot over GBrain expert notes.",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "gbrain-nvidia-embeddings",
       "category": "note-taking",
       "frontmatter_name": "gbrain-nvidia-embeddings",
@@ -1681,6 +1736,19 @@
         "linux",
         "macos"
       ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "gbrain-rag-bot",
+      "category": "note-taking",
+      "frontmatter_name": "gbrain-rag-bot",
+      "description": "RAG GBrain notes into a Hermes advisor profile or CLI bot.",
+      "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
         "requires_toolsets": [],

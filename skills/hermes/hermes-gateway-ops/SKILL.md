@@ -54,6 +54,18 @@ systemd-run --user --on-active=2s --unit=gwup bash /tmp/gwup.sh
 - **Your session dies and is restored as an orphan.** After ~15s, verify with `systemctl --user is-active hermes-gateway` → `active`, then grep the log for the platform's `Connected` line.
 - The guard ALSO false-positives: any command whose text contains "restart"/"stop" near gateway-ish words gets blocked even if harmless (e.g. a python one-liner reading `config['gateway']`). Keep terminal commands free of those words; move the actual restart into the script file.
 
+## Multi-profile gateways (default + other profiles)
+
+When more than one profile runs a gateway (e.g. `default` + `alex-hormozi`), each
+profile is a SEPARATE process with its own token, `.env`, and `gateway_state.json`.
+The `default` profile auto-starts via systemd; other profiles must be launched
+manually (`terminal(background=true)` → `hermes -p <name> gateway run`). The
+single-profile triage below still applies, but token collisions, missing per-profile
+credentials, and protected-`.env` edits are multi-profile-only traps. Full procedure,
+exact error strings, and the python `.env`-edit snippet are in
+`references/multi-profile-token-collision.md` (load with
+`skill_view(name="hermes-gateway-ops", file_path="references/multi-profile-token-collision.md")`).
+
 ## Triage: "bot connected but doesn't respond"
 
 Order of checks (see `references/discord-deaf-bot-triage.md` for the full Discord deep-dive with API endpoints):

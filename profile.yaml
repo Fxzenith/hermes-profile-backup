@@ -2,3 +2,8 @@ description: 'Generalist profile: writes and debugs code, manages GitHub PRs/iss
   builds diagrams and creative visuals, and handles documentation, spreadsheets, email,
   and research writing.'
 description_auto: true
+ui_meta:
+  hermes-bots:
+    chat: 20260817_081104_527dad
+    pinned: true
+    group: Confrence Room

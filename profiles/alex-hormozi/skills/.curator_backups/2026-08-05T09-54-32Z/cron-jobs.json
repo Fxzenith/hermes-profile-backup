@@ -1,0 +1,53 @@
+{
+  "jobs": [
+    {
+      "id": "69d7b69c2221",
+      "name": "instagram-carousel-daily",
+      "prompt": "Run the Instagram carousel generator and poster cron job.\nThis will:\n1. Select a content template (or fetch from RSS/JSON/API)\n2. Generate carousel slides using thread-to-carousel.py\n3. Upload slides to configured image host (Imgur/R2/S3/local server)\n4. Post to Instagram via Graph API\n\nThe script is at /root/.hermes/scripts/cron_carousel.py",
+      "skills": [
+        "terminal"
+      ],
+      "skill": "terminal",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "nvidia",
+      "model_snapshot": "nvidia/nemotron-3-ultra-550b-a55b",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 6
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-30T15:38:30.150589+02:00",
+      "next_run_at": "2026-08-06T09:00:00+02:00",
+      "last_run_at": "2026-08-05T09:01:01.029684+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Skipped to prevent unintended spend: global inference config drifted since this job was created (provider 'nvidia' -> 'opencode-zen'; model 'nvidia/nemotron-3-ultra-550b-a55b' -> 'deepseek-v4-flash-free'), and this job is unpinned. No inference call was made. To run on the new config, pin it explicitly: `cronjob action=update job_id=69d7b69c2221 provider=<provider> model=<model>` (or pin the original values to keep them). See #44585.",
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6898985502",
+        "chat_name": "Ze Nith",
+        "thread_id": null,
+        "user_id": "6898985502"
+      },
+      "enabled_toolsets": null,
+      "workdir": "/root/instagram-thread-carousel",
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-08-05T09:01:01.030944+02:00"
+}

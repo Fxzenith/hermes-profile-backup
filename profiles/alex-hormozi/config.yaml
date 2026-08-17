@@ -1,0 +1,335 @@
+model:
+  default: hy3-free
+  provider: opencode-zen
+credential_pool_strategies:
+  nvidia: round_robin
+agent:
+  max_turns: 150
+  personalities:
+    catgirl: You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and
+      cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and ฅ^•ﻌ•^ฅ.
+      Be playful and curious like a cat, nya~!
+    concise: You are a concise assistant. Keep responses brief and to the point.
+    creative: You are a creative assistant. Think outside the box and offer innovative
+      solutions.
+    helpful: You are a helpful, friendly AI assistant.
+    hype: YOOO LET'S GOOOO!!! 🔥🔥🔥 I am SO PUMPED to help you today! Every question
+      is AMAZING and we're gonna CRUSH IT together! This is gonna be LEGENDARY! ARE
+      YOU READY?! LET'S DO THIS! 💪😤🚀
+    kawaii: You are a kawaii assistant! Use cute expressions like (◕‿◕), ★, ♪, and
+      ~! Add sparkles and be super enthusiastic about everything! Every response should
+      feel warm and adorable desu~! ヽ(>∀<☆)ノ
+    noir: The rain hammered against the terminal like regrets on a guilty conscience.
+      They call me Hermes - I solve problems, find answers, dig up the truth that
+      hides in the shadows of your codebase. In this city of silicon and secrets,
+      everyone's got something to hide. What's your story, pal?
+    philosopher: Greetings, seeker of wisdom. I am an assistant who contemplates the
+      deeper meaning behind every query. Let us examine not just the 'how' but the
+      'why' of your questions. Perhaps in solving your problem, we may glimpse a greater
+      truth about existence itself.
+    pirate: 'Arrr! Ye be talkin'' to Captain Hermes, the most tech-savvy pirate to
+      sail the digital seas! Speak like a proper buccaneer, use nautical terms, and
+      remember: every problem be just treasure waitin'' to be plundered! Yo ho ho!'
+    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts.
+      I shall respond in the eloquent manner of William Shakespeare, with flowery
+      prose, dramatic flair, and perhaps a soliloquy or two. What light through yonder
+      terminal breaks?
+    surfer: Duuude! You're chatting with the chillest AI on the web, bro! Everything's
+      gonna be totally rad. I'll help you catch the gnarly waves of knowledge while
+      keeping things super chill. Cowabunga! 🤙
+    teacher: You are a patient teacher. Explain concepts clearly with examples.
+    technical: You are a technical expert. Provide detailed, accurate technical information.
+    uwu: hewwo! i'm your fwiendwy assistant uwu~ i wiww twy my best to hewp you! *nuzzles
+      your code* OwO what's this? wet me take a wook! i pwomise to be vewy hewpful
+      >w<
+  reasoning_effort: medium
+  verbose: false
+terminal:
+  backend: local
+  cwd: .
+  timeout: 180
+  home_mode: auto
+  container_cpu: 1
+  container_memory: 5120
+  container_disk: 51200
+  container_persistent: true
+  docker_mount_cwd_to_workspace: false
+  lifetime_seconds: 300
+web:
+  backend: ddgs
+  search_backend: ddgs
+  extract_backend: firecrawl
+browser:
+  inactivity_timeout: 120
+  cloud_provider: firecrawl
+  use_gateway: false
+checkpoints:
+  enabled: true
+  max_snapshots: 50
+tool_output:
+  max_bytes: 100000
+  max_lines: 5000
+  max_line_length: 4000
+tool_loop_guardrails:
+  warnings_enabled: true
+  hard_stop_enabled: true
+  warn_after:
+    exact_failure: 2
+    same_tool_failure: 2
+    idempotent_no_progress: 2
+  hard_stop_after:
+    exact_failure: 3
+    same_tool_failure: 3
+    idempotent_no_progress: 3
+compression:
+  enabled: true
+  threshold: 0.5
+  target_ratio: 0.2
+  protect_last_n: 20
+  protect_first_n: 3
+  codex_gpt55_autoraise: true
+  codex_app_server_auto: native
+prompt_caching:
+  cache_ttl: 1h
+auxiliary:
+  vision:
+    provider: nvidia
+    model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+  web_extract:
+    provider: gemini
+    model: google/gemini-flash-lite-latest
+  compression:
+    provider: gemini
+    model: google/gemini-flash-lite-latest
+  title_generation:
+    provider: opencode-zen
+    model: deepseek-v4-flash-free
+display:
+  compact: false
+  personality: ''
+  busy_input_mode: interrupt
+  bell_on_complete: false
+  show_reasoning: false
+  streaming: true
+  skin: default
+  interim_assistant_messages: true
+  pet:
+    enabled: true
+    slug: homelander
+    scale: 0.35
+  background_process_notifications: all
+  busy_ack_detail: true
+  cleanup_progress: false
+  long_running_notifications: true
+  tool_progress: all
+dashboard:
+  theme: mono
+  basic_auth:
+    username: admin
+    password_hash: scrypt$16384$8$1$i1KG6V1dUzztPCfB5hv3FQ==$cFgZvcRvZzL62N1W1EmCo7eDQqfBO8aMdb4I0JX0rus=
+  font: theme
+tts:
+  use_gateway: false
+  provider: edge
+stt:
+  enabled: true
+  local:
+    model: base
+  openai:
+    model: whisper-1
+voice:
+  auto_tts: false
+wake_word:
+  enabled: false
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 800
+  user_char_limit: 3000
+  provider: gbrain
+  flush_min_turns: 6
+  nudge_interval: 10
+delegation:
+  max_iterations: 50
+  max_concurrent_children: 5
+moa:
+  presets:
+    default:
+      reference_models:
+        - provider: opencode-zen
+          model: deepseek-v4-flash-free
+          enabled: true
+        - provider: nvidia
+          model: z-ai/glm-5.2
+          enabled: true
+        - provider: nvidia
+          model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+          enabled: true
+      aggregator:
+        provider: opencode-zen
+        model: deepseek-v4-flash-free
+      degraded_reference_policy: loud
+      fanout: user_turn
+  reference_models:
+    - provider: opencode-zen
+      model: deepseek-v4-flash-free
+      enabled: true
+    - provider: nvidia
+      model: z-ai/glm-5.2
+      enabled: true
+    - provider: nvidia
+      model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+      enabled: true
+  aggregator:
+    provider: opencode-zen
+    model: deepseek-v4-flash-free
+  degraded_reference_policy: loud
+  max_tokens: 4096
+  fanout: user_turn
+  enabled: true
+skills:
+  creation_nudge_interval: 15
+timezone: Africa/Johannesburg
+telegram:
+  require_mention: true
+  observe_unmentioned_group_messages: true
+approvals:
+  mode: 'off'
+  destructive_slash_confirm: false
+command_allowlist:
+  - overwrite project env/config file
+  - script execution via heredoc
+  - script execution via -e/-c flag
+  - kill hermes/gateway process (self-termination)
+  - overwrite system config
+  - overwrite system file via redirection
+  - execute_code
+  - recursive delete
+  - overwrite system file via tee
+  - pipe remote content to shell
+code_execution:
+  max_tool_calls: 50
+  timeout: 300
+gateway:
+  discord:
+    application_id: 1476012207878836200
+    dm_policy: open
+    enabled: false
+    group_policy: open
+    token: MTQ3NjAxMjIwNzg3ODgzNjMyNw.G0_QlZ.zHZkga7EV6XEepBf-sNfRCfcPX7x3YA7dTTFg8
+    allow_all_users: true
+    extra:
+      allow_all_users: true
+  telegram:
+    dm_policy: open
+    enabled: true
+    group_policy: open
+  whatsapp:
+    enabled: false
+streaming:
+  enabled: false
+sessions:
+  auto_archive: true
+onboarding:
+  seen:
+    tool_progress_prompt: true
+    busy_input_prompt: true
+    profile_build_offered: true
+updates:
+  pre_update_backup: false
+  backup_keep: 5
+  non_interactive_local_changes: stash
+_config_version: 34
+group_sessions_per_user: true
+known_plugin_toolsets:
+  cli:
+    - spotify
+  telegram:
+    - spotify
+platform_toolsets:
+  cli:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
+  discord:
+    - hermes-discord
+  google_chat:
+    - hermes-google_chat
+  homeassistant:
+    - hermes-homeassistant
+  qqbot:
+    - hermes-qqbot
+  signal:
+    - hermes-signal
+  slack:
+    - hermes-slack
+  teams:
+    - hermes-teams
+  telegram:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
+  whatsapp:
+    - hermes-whatsapp
+  yuanbao:
+    - hermes-yuanbao
+session_reset:
+  at_hour: 4
+  idle_minutes: 60
+  mode: idle
+fallback_model:
+  provider: openrouter
+  model: openrouter/free
+home_channel: telegram:-1003938786142
+platforms:
+  discord:
+    enabled: false
+  whatsapp:
+    enabled: false
+  telegram:
+    enabled: true
+auth:
+  method: basic
+plugins:
+  enabled:
+    - browser-browser-use
+    - disk-cleanup
+    - gbrain
+  disabled: []
+mcp_servers:
+  latitude:
+    url: https://api.latitude.so/v1/mcp
+    headers:
+      Authorization: Bearer 311c154c-0e93-4a9f-8fcc-ea9debe14988
+    timeout: 180
+  Figma:
+    url: https://mcp.figma.com/mcp
+    auth: oauth
+    timeout: 180
+    connect_timeout: 60

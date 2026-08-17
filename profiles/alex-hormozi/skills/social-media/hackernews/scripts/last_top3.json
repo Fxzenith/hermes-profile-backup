@@ -1,0 +1,29 @@
+[
+  {
+    "rank": 1,
+    "title": "England set to be one of the first countries to eliminate hepatitis C",
+    "url": "https://www.bbc.com/news/articles/c75gk620r22o",
+    "points": 61,
+    "comments": 28,
+    "by": "stevekemp",
+    "type": "story"
+  },
+  {
+    "rank": 2,
+    "title": "France to ban unsolicited telemarketing calls",
+    "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
+    "points": 565,
+    "comments": 315,
+    "by": "aziaziazi",
+    "type": "story"
+  },
+  {
+    "rank": 3,
+    "title": "As AI eats the web, the internet\u2019s collective memory is disappearing",
+    "url": "https://thewalrus.ca/google-search-is-dying/",
+    "points": 498,
+    "comments": 570,
+    "by": "awnird",
+    "type": "story"
+  }
+]
