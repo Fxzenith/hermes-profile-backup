@@ -1,0 +1,122 @@
+---
+name: instagram-quote-pipeline
+description: "Maintain the Instagram daily quote-post pipeline."
+version: 0.1.0
+author: Hermes
+license: MIT
+platforms: [linux]
+metadata:
+  hermes:
+    tags: [instagram, quote-pool, cron, python, pipeline, social-media]
+---
+
+# Instagram Daily Quote-Post Pipeline
+
+Maintain the deterministic no-repeat quote pool and the posting pipeline that
+publishes one motivational-quote image (morning 11:00) and one reel (evening
+18:00) to Instagram. Covers editing the quote pool, excluding quote types, and
+the test/verification loop. It does NOT cover Instagram Graph API credentials
+or the Composio publish step — those are stable and outside the pool.
+
+## When to Use
+
+- "Remove/exclude a type of quote from the Instagram bot" (listicle, self-authored, a topic).
+- "Add quotes to the pool" / "change what the bot posts".
+- "Why is the bot posting X?" / trace which quote maps to a date+slot.
+- Editing `cron_post.TEMPLATES` or `quote_pool.py`.
+- Running or extending `test_quote_pool.py` / `test_quote_exclude.py`.
+
+## Prerequisites
+
+- Project root (NOTE the space in the path): `/root/projects/Instagram daily auto-post`
+- Run Python with `PYTHONPATH=scripts` from that root; imports are not installed.
+- Don't fabricate `author` values — leave unknown as `""` (see Pitfalls).
+
+## How to Run
+
+Invoke all scripts via the `terminal` tool from the project root, setting
+`PYTHONPATH=scripts`:
+
+```bash
+cd "/root/projects/Instagram daily auto-post"
+PYTHONPATH=scripts python3 scripts/test_quote_exclude.py   # no self/listicle leak
+PYTHONPATH=scripts python3 scripts/test_quote_pool.py      # 100-pick no-repeat + LRU
+```
+
+## Quick Reference
+
+- Daily driver: `scripts/composio_post.py` → `quote_pool.pick(slot, date)` for
+  `morning`/`evening`. THIS is what actually posts. `cron_post.py`'s
+  `run_cron_job()` uses random `select_template()` and is the legacy/alternate path.
+- Pool source: `cron_post.TEMPLATES` (4 topics × 8 tweets).
+- Pool builder: `quote_pool.set_templates(templates)` — the ONLY place to filter.
+- Pool state: `logs/quote_pool_state.json`; audit: `logs/quote_pool.log`.
+- Tweet shape: `{"text": str, "author": str}` (was a bare string before the
+  exclusion change — see Pitfalls).
+
+## Procedure
+
+### Add / edit a quote
+1. Edit the relevant entry in `cron_post.TEMPLATES` (keep the `{"text","author"}` dict).
+2. For the owner's OWN quotes, set `"author": "Ze Nith"` (or `"@zenith"`) so the
+   filter drops them. Leave third-party/unknown as `"author": ""`.
+3. Re-run both tests (Quick Reference). Expect `test_quote_exclude.py` PASS and
+   `test_quote_pool.py` PASS.
+4. Commit ONLY source files:
+   `git add scripts/cron_post.py scripts/quote_pool.py scripts/test_quote_exclude.py`
+   (do NOT commit `logs/` or `workspace/` runtime artifacts).
+
+### Exclude a quote type (the pattern already in place)
+The exclusion filter lives in `quote_pool.set_templates()`. Two drop rules:
+- Self-authored: `author.strip().lower() in SELF_AUTHORS`
+  (`SELF_AUTHORS = {"ze nith", "@zenith", "zenith"}`, case-insensitive).
+- Listicle / step format: `_is_listicle(text)` via
+  `re.compile(r"(?m)^\s*\d+[\.\)]|step\s+\d+", re.IGNORECASE)`.
+Add a new class by adding to `SELF_AUTHORS` or extending the regex — never by
+hand-deleting pool entries.
+
+### Inspect what a date+slot will post
+```bash
+cd "/root/projects/Instagram daily auto-post"
+PYTHONPATH=scripts python3 -c "import quote_pool as qp, cron_post; \
+qp.set_templates(cron_post.TEMPLATES); \
+print(qp.pick('morning','2026-08-18'))"
+```
+
+## Pitfalls
+
+- **Driver is `composio_post.py`, not `cron_post.py`.** Editing `cron_post.py`
+  alone does nothing for the daily post unless `composio_post.py` consumes the
+  same `TEMPLATES`/`quote_pool`. It does — both import `cron_post.TEMPLATES` and
+  `quote_pool` — so edit the shared `TEMPLATES` and `quote_pool`, not `run_cron_job`.
+- **`build_post_config` reads tweets as plain strings.** In `cron_post.py`,
+  `build_post_config(template, folder, tweet_idx=...)` does
+  `tweet_text = tweets[tweet_idx]`. After the `{"text","author"}` shape change it
+  must be `tweet_text = tweet["text"] if isinstance(tweet, dict) else tweet`.
+  Forgetting this raises `TypeError: string indices must be integers` at post time.
+- **Empty `author` is KEPT, not excluded.** By design: the bot must avoid the
+  owner's OWN quotes, not invent attributions. Don't set empty authors to
+  excluded unless the user explicitly wants "third-party only, drop all untagged".
+- **Pool shrinks when you exclude.** Excluding `learning#1` dropped the pool
+  32 → 31. `test_quote_pool.py` asserts `pool_size >= 30`; if further exclusions
+  push it below 30, lower that floor (don't re-add excluded quotes to satisfy it).
+- **Path has a space** — always quote it: `cd "/root/projects/Instagram daily auto-post"`.
+- **Listicle regex is heuristic** — a quote that legitimately starts a line with
+  "1." (e.g. a dated fact) would be dropped. Check `test_quote_exclude.py` output
+  if a wanted quote vanishes.
+
+## Verification
+
+```bash
+cd "/root/projects/Instagram daily auto-post"
+PYTHONPATH=scripts python3 scripts/test_quote_exclude.py
+PYTHONPATH=scripts python3 scripts/test_quote_pool.py
+# confirm a specific excluded id is gone:
+PYTHONPATH=scripts python3 -c "import quote_pool as qp, cron_post; \
+qp.set_templates(cron_post.TEMPLATES); \
+print('learning#1 present?', 'learning#1' in {e['id'] for e in qp._POOL})"
+# Expected: learning#1 present? False  (both tests PASS)
+```
+
+Deeper architecture notes and the exact exclusion diff live in
+`references/pool-and-posting-gotchas.md`.

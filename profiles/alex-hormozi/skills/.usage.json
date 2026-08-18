@@ -462,14 +462,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-17T07:19:04.370863+00:00",
-    "last_viewed_at": "2026-08-17T07:19:04.364385+00:00",
+    "last_used_at": "2026-08-18T01:16:04.498447+00:00",
+    "last_viewed_at": "2026-08-18T01:16:04.484904+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 5,
+    "view_count": 5
   },
   "findmy": {
     "archived_at": null,
@@ -791,14 +791,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-17T11:29:11.688833+00:00",
-    "last_viewed_at": "2026-08-17T11:29:11.677963+00:00",
+    "last_used_at": "2026-08-18T01:16:04.491197+00:00",
+    "last_viewed_at": "2026-08-18T01:16:04.470481+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 5,
+    "view_count": 5
   },
   "hormozi-advisor": {
     "archived_at": null,
@@ -890,14 +890,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-17T12:11:23.721516+00:00",
-    "last_viewed_at": "2026-08-17T12:11:23.713410+00:00",
+    "last_used_at": "2026-08-18T01:15:48.531952+00:00",
+    "last_viewed_at": "2026-08-18T01:15:48.524410+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "kanban-task-tracking": {
     "archived_at": null,

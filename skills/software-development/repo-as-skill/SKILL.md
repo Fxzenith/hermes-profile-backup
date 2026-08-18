@@ -41,6 +41,7 @@ The user's recurring request: "add this repo then create a skill of it" (often w
 - **Disk pressure:** this box runs at ~90%+ full — use `--no-cache-dir` on pip/uv installs, `df -h` first, keep fixtures small.
 - **venv Python vs script shebangs:** helpers may import heavy, deps. Run them with the venv's python (`/root/.venvs/<name>/bin/python` or `<repo>/.venv/bin/python`), not bare `python3` from system PATH.
 - **`git pull` on the live clone** if behavior looks stale before recommending commands.
+- **Local skill rename lost on pull.** If you patched a skill name (e.g. `diagram-design`→`diagram`) on a symlinked skill-first repo, protect it with `git update-index --skip-worktree <path>/SKILL.md` and keep an on-disk `LOCAL_PATCHES.md` ledger — see `references/local-patch-durability.md`. Don't rely on the memory backend for durability on a headless box; it can reject writes.
 
 ## Worked examples
 
