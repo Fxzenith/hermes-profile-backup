@@ -1,0 +1,123 @@
+HERMES_BACKEND_READY port=39251
+🔄 Switched to fallback model: hy3-free via opencode-zen → openrouter/free via openrouter
+🔄 Switched to fallback model: hy3-free via opencode-zen → openrouter/free via openrouter
+🔄 Switched to fallback model: hy3-free via opencode-zen → openrouter/free via openrouter
+🔄 Switched to fallback model: hy3-free via opencode-zen → openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: opencode-zen  Model: hy3-free
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 429: Rate limit exceeded. Please try again later.
+   📋 Details: {'type': 'FreeUsageLimitError', 'message': 'Rate limit exceeded. Please try again later.'}
+   ⏱️  Elapsed: 1.32s  Context: 56 msgs, ~27,274 tokens
+⚠️ Rate limited — switching to fallback provider...
+🔄 Primary model failed — switching to fallback: openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1787184000000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 0.60s  Context: 56 msgs, ~27,275 tokens
+⏱️ Rate limited. Waiting 3.0s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1787184000000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 3.86s  Context: 56 msgs, ~27,275 tokens
+⏱️ Rate limited. Waiting 4.4s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1787184000000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 8.76s  Context: 56 msgs, ~27,275 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: opencode-zen  Model: hy3-free
+   🌐 Endpoint: https://opencode.ai/zen/v1
+   📝 Error: HTTP 429: Rate limit exceeded. Please try again later.
+   📋 Details: {'type': 'FreeUsageLimitError', 'message': 'Rate limit exceeded. Please try again later.'}
+   ⏱️  Elapsed: 1.32s  Context: 56 msgs, ~27,529 tokens
+⚠️ Rate limited — switching to fallback provider...
+🔄 Primary model failed — switching to fallback: openrouter/free via openrouter
+⚠️  API call failed (attempt 1/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1787184000000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 1.95s  Context: 56 msgs, ~27,530 tokens
+⏱️ Rate limited. Waiting 2.2s (attempt 2/3)...
+⚠️  API call failed (attempt 2/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1787184000000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 4.99s  Context: 56 msgs, ~27,530 tokens
+⏱️ Rate limited. Waiting 5.7s (attempt 3/3)...
+⚠️  API call failed (attempt 3/3): RateLimitError [HTTP 429]
+   🔌 Provider: openrouter  Model: openrouter/free
+   🌐 Endpoint: https://openrouter.ai/api/v1/
+   📝 Error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   📋 Details: {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1787184000000'}, 'limit_source': 'openrouter_free_tier_daily', 'reme
+   ⏱️  Elapsed: 11.08s  Context: 56 msgs, ~27,530 tokens
+❌ Rate limited after 3 retries — HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+   💀 Final error: HTTP 429: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day
+  Hermes backend listening on 127.0.0.1:39251
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "9a78ee02", "stored_session_id": "20260817_140658_b263c0", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "46019efc", "stored_session_id": "20260819_154456_254790", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "87b9d627", "stored_session_id": "20260817_140707_032aea", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}

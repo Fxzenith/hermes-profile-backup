@@ -1,7 +1,7 @@
 model:
-  default: hy3-free
-  provider: opencode
-  base_url: https://opencode.ai/zen/v1
+  default: nvidia/nemotron-3.5-lightning-30b-a3b
+  provider: nvidia
+  base_url: https://integrate.api.nvidia.com/v1
 credential_pool_strategies:
   nvidia: round_robin
 agent:
@@ -130,8 +130,8 @@ dashboard:
     password_hash: scrypt$16384$8$1$i1KG6V1dUzztPCfB5hv3FQ==$cFgZvcRvZzL62N1W1EmCo7eDQqfBO8aMdb4I0JX0rus=
   font: theme
 tts:
-  use_gateway: false
   provider: edge
+  use_gateway: false
 stt:
   enabled: true
   local:
@@ -335,3 +335,19 @@ mcp_servers:
     auth: oauth
     timeout: 180
     connect_timeout: 60
+
+# ── Security ──────────────────────────────────────────────────────────
+# Secret redaction is ON by default — strings that look like API keys,
+# tokens, and passwords are masked in tool output, logs, and chat
+# responses before the model or user ever sees them. Set redact_secrets
+# to false to disable (e.g. when developing the redactor itself).
+# tirith pre-exec scanning is enabled by default when the tirith binary
+# is available. Configure via security.tirith_* keys or env vars
+# (TIRITH_ENABLED, TIRITH_BIN, TIRITH_TIMEOUT, TIRITH_FAIL_OPEN).
+#
+# security:
+#   redact_secrets: true
+#   tirith_enabled: true
+#   tirith_path: "tirith"
+#   tirith_timeout: 5
+#   tirith_fail_open: true

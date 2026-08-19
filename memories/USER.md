@@ -5,3 +5,11 @@ User is building a GBrain-backed "Expert Advisory Council": structured expert pr
 User builds 'JFX Journal' (Supabase/React/Vite/TS trading-journal web app; docs + drafts at /root/projects/JFX JOURNAL/). Collaboration pattern: he runs a group chat ('Confrence Room') with @alex-hormozi (business/offer-engineering advisor) and @default (operator who turns advice into real file deliverables). Decided offer strategy (Hormozi lens, Aug 2026): wedge = scared beginner trader afraid of blowing up; Free = daily risk-guardrail hook, Pro = AI trade review + tilt alerts (paid hook), Premium = broker sync + API; outcome-first copy not feature lists. pricing.md + landing.md drafted in the folder.
 §
 Prefers concise names for skills/commands — explicitly asked to shorten `diagram-design` → `diagram`. Keep skill/command names short when you have discretion.
+§
+User prefers concise, direct communication; builds a GBrain-backed Expert Advisory Council using Alex Hormozi, Naval Ravikant, Paul Graham, Charlie Munger, and Elon Musk as structured advisors; values low-token-cost AI solutions; technical proficiency; dislikes fluff and verbose responses; seeks clear, actionable guidance.
+§
+Prefers real browser automation via Chrome DevTools Protocol (puppeteer-core driving system Chromium) over raw HTTP/curl when interacting with or scraping websites — wants genuine DOM navigation/clicks, not fetches. On this VPS, Chromium 150 is preinstalled via snap and puppeteer-core (no browser download) lives at /root/scraper.
+§
+When building a repeatable process, user wants the reusable skill/tool created FIRST, then the scaled execution run after. Explicitly directed: 'create a skill first then pull more than 10 after'.
+§
+User has multiple Google accounts: phemelop25@gmail.com (this Composio CLI session / Hermes workspace login) AND a separate "other" Google account that holds their Composio Google Sheets Connected Account(s) (e.g. ca_3JsAYJlpl2p5, ca_TJMyucDjeReh). Connections created under the other account are NOT visible to the CLI authenticated as phemelop25@gmail.com. When a Composio connection "doesn't show up," check whether it was authorized under the other Google identity before assuming failure.
