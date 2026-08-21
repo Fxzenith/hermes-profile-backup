@@ -42,6 +42,41 @@ gbrain get <slug>               # full note content (e.g. inbox/2026-08-07-1e17d
 ## Expert Profiles (Advisory Council pattern)
 To answer "what would Alex Hormozi do?" style questions, store expert knowledge as GBrain pages — NOT a separate expert database (user's hard rule: GBrain is the single source of truth; extend its schema, never duplicate). Convention + retrieval workflow: `references/expert-knowledge.md`. Summary: expert index = `person` page at `experts/<slug>/profile`; each principle/framework = `atom` page with `expert`/`topic`/`ktype`/`principle`/`source_*`/`confidence` frontmatter. Retrieve via `gbrain search` + `gbrain get`. Always separate **direct knowledge** (expert explicitly taught — cite `source_title`) from **application/inference** (Hermes' reasoning); never impersonate the expert or fabricate sources/quotes.
 
+## Capture pitfalls — READ BEFORE ANY BATCH INGEST
+
+These two gotcha's cost a full re-ingest session. Encode them now.
+
+### 1. Content-hash cascade deletion (page silently vanishes)
+`gbrain` indexes pages by **`content_hash`**, NOT by slug. Two distinct slugs whose
+**file bodies are identical** share one content_hash. Deleting EITHER slug cascades
+and removes the sibling too — even though the sibling had a different slug.
+- **Symptom**: you capture `experts/alex-hormozi/ci-niche-down`, later also
+  `experts_alex-hormozi_ci-niche-down` (underscore twin from a bad loop var), then
+  `gbrain delete` the underscore one to clean up — and the slash one **disappears too**.
+- **Rule**: exactly ONE canonical slug per content. Never create a throwaway twin
+  (underscore vs slash, example vs real) of a page you intend to keep. If you must
+  clean up stray slugs, `gbrain get <keep-slug>` FIRST to confirm the survivor is the
+  one you want; deleting its twin can take it down with it. Prefer leaving strays
+  (or `gbrain delete` only after re-capturing the canonical one fresh) over risking
+  cascade deletion.
+
+### 2. Daemon load + async write lag — `created_or_updated` lies under a loop
+Under a fast bash loop (many captures back-to-back), the gbrain daemon drops/races
+writes. `capture` returns `status: created_or_updated` but a later `gbrain get`
+returns `page_not_found`. `--quiet` makes it worse (suppresses the returned slug so
+you can't even tell what happened).
+- **Reliable pattern**: capture each page in its **own terminal call** (not a tight
+  loop), then **verify in a separate call** with `gbrain get <slug>` — retry the
+  capture only if `get` reports missing. A single isolated capture + immediate `get`
+  is stable; 9-in-a-loop is not.
+- **Slug convention**: use the SAME separator the existing namespace uses. This brain
+  uses **slash slugs** (`experts/alex-hormozi/ci-x`), NOT underscores
+  (`experts_alex-hormozi_ci-x`). Mismatched separators also create the twins from #1.
+- Verify with `gbrain get <slug>` (returns the frontmatter + body) — NOT `gbrain list`
+  or `gbrain search`, which have page-size/sorting limits that can hide fresh pages.
+
+Reproducible verified loop + the exact failure transcript: `references/capture-ingest-pitfalls.md`.
+
 ## Verify / baseline
 - `gbrain doctor` — health report. Healthy: "Overall health score: N/100. All checks OK". Key lines: `embed_staleness: No stale chunks`, `embedding_width_consistency: Schema width (Nd) matches gateway embedding_dimensions`, `schema_version` current.
 - `gbrain search "term"` — returns `[score] title`; a similarity score (e.g. `[0.7854]`) means vector search is live. Bare keyword hits without score = embeddings broken/degraded.
@@ -74,3 +109,4 @@ This repo previously contained widespread corruption from a botched automated fi
 
 ## References
 - `references/nvidia-asymmetric-embeddings.md` — full NVIDIA debug chain: curl probe matrix, before/after wire bodies, exact fixes, key facts.
+- `references/capture-ingest-pitfalls.md` — content-hash cascade deletion + daemon-load verify loop; the failure transcript from a real re-ingest (see "Capture pitfalls" above).
