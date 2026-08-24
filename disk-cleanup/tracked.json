@@ -112,5 +112,17 @@
     "timestamp": "2026-08-17T08:37:47.163147+00:00",
     "category": "temp",
     "size": 575
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1787576237-f98f38af.sh",
+    "timestamp": "2026-08-24T12:57:17.643597+00:00",
+    "category": "temp",
+    "size": 503
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1787576305-fbe2370a.sh",
+    "timestamp": "2026-08-24T12:58:25.716216+00:00",
+    "category": "temp",
+    "size": 573
   }
 ]

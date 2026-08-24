@@ -477,14 +477,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-21T01:34:34.684486+00:00",
-    "last_viewed_at": "2026-08-21T01:34:34.676282+00:00",
+    "last_used_at": "2026-08-24T07:10:35.616130+00:00",
+    "last_viewed_at": "2026-08-24T07:10:35.595476+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 7,
+    "view_count": 7
   },
   "findmy": {
     "archived_at": null,
@@ -806,14 +806,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-19T11:45:27.613630+00:00",
-    "last_viewed_at": "2026-08-19T11:45:27.602808+00:00",
+    "last_used_at": "2026-08-24T07:12:34.625045+00:00",
+    "last_viewed_at": "2026-08-24T07:12:34.617630+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 9,
+    "view_count": 9
   },
   "hormozi-advisor": {
     "archived_at": null,

@@ -7,3 +7,11 @@ ui_meta:
     chat: 20260817_081104_527dad
     pinned: true
     group: Confrence Room
+  hermes-bots-groups:
+    version: 3
+    updatedAt: 1787556158992
+    rooms: {}
+    deleted:
+      name:Confrence Room: 1
+      id:rmt6wq6rn-i4om4: 1
+      name:room: 1
