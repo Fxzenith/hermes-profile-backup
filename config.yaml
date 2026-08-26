@@ -1,7 +1,7 @@
 model:
-  default: muse-spark-1.2
-  provider: opencode
-  base_url: https://opencode.ai/zen/v1
+  default: gemini-3.6-flash
+  provider: gemini
+  base_url: https://generativelanguage.googleapis.com/v1beta
 credential_pool_strategies:
   nvidia: round_robin
 agent:
@@ -96,14 +96,14 @@ prompt_caching:
   cache_ttl: 1h
 auxiliary:
   vision:
-    provider: nvidia
-    model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+    provider: opencode-zen
+    model: x-preview-f-free
   web_extract:
-    provider: gemini
-    model: google/gemini-flash-lite-latest
+    provider: opencode-zen
+    model: muse-spark-1.2
   compression:
-    provider: gemini
-    model: google/gemini-flash-lite-latest
+    provider: opencode-zen
+    model: muse-spark-1.2
   title_generation:
     provider: opencode-zen
     model: deepseek-v4-flash-free

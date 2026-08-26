@@ -55,5 +55,14 @@ uv run python scripts/face_reframe.py --broll-zoom 1.12
 - Box has limited disk (~12G free); the full download is ~190MB and lives in `video/`. Clean `video/full.mp4` between runs if space is tight.
 - `main.js` pauses for ENTER between transcript fetch and approval even with `--approve` (the clip-selection step is manual/AI, not automatic).
 
+## Raw-reframe artifact (Aug 2026)
+`face_reframe.py` writes `Outputs/NN_slug.raw.mp4` (untouched 9:16 reframe). `export.js` burns ALL platform variants — including the canonical no-suffix `NN_slug.mp4` — from that raw file. Never burn in place: the canonical path is a *final* (subtitled + end-card), not a source. Resume = mtime(out) >= mtime(raw) per variant; re-rendering a clip deletes only its stale `.raw.mp4`, never finals.
+
+## FaceMesh engine on this box
+MediaPipe here (0.10.35, py3.12) has NO `mp.solutions` — face tracking runs via Tasks-API `vision.FaceLandmarker` with `models/face_landmarker.task` (setup.sh downloads it; legacy FaceMesh still preferred when importable). Symptom if both engines fail: log says "using BlazeFace fallback" and crop quality drops to single-point tracking.
+
+## Face-tracked subtitles semantics
+Safe-zone MarginV is the hard floor. Only when the sampled face sits abnormally low (nfy >= 0.45) does the caption lift above it (`HEIGHT*(nfy+0.10)`). Don't clamp tracked values TO the safe-zone floor — that disables the feature entirely.
+
 ## Verification contract
-The real end-to-end test is `node main.js "<URL>" --approve` producing `Outputs/NN_slug.mp4` files. Offline/no-key verification: `uv run python python/transcript.py --url "<URL>"` writes `data/transcript.json` (proves uv venv + youtube-transcript-api work). Deps import check: `uv run python -c "import youtube_transcript_api,yt_dlp,cv2,mediapipe,PIL,pydub"`.
+The real end-to-end test is `node scripts/export.js --platforms shorts` after assets exist, run TWICE: second run must burn nothing (resume proof). Full chain: `node main.js "<URL>" --approve`. Offline checks: transcript fetch writes `data/transcript.json`; deps check `uv run python -c "import youtube_transcript_api,yt_dlp,cv2,mediapipe,PIL,pydub"`; syntax sweep `uv run python -W error::SyntaxWarning -m py_compile scripts/*.py python/*.py && node --check main.js scripts/*.js`.

@@ -1,0 +1,161 @@
+HERMES_BACKEND_READY port=37685
+[33m⚠ Deprecated .env settings detected:[0m
+  [33m⚠[0m TERMINAL_CWD=/root found in .env — this is deprecated.
+  [2mMove to config.yaml instead:  terminal:\n    cwd: /your/project/path[0m
+  [2mThen remove the old entries from ~/.hermes/.env[0m
+
+⚠ Auxiliary title generation failed: HTTP 400: Error from provider (Console): Upstream request failed: Model is unavailable.
+🔄 Switched to fallback model: muse-spark-1.2 via opencode-zen → openrouter/free via openrouter
+⚠ Auxiliary title generation failed: HTTP 400: Error from provider (Console): Upstream request failed: Model is unavailable.
+
+✨ cua-driver v0.22.1 is available (you have v0.19.3).
+   Update with: cua-driver update
+   Release notes: https://github.com/trycua/cua/releases/tag/cua-driver-rs-v0.22.1
+
+🔄 Switched to fallback model: muse-spark-1.2 via opencode-zen → openrouter/free via openrouter
+🔄 Switched to fallback model: muse-spark-1.2 via opencode-zen → openrouter/free via openrouter
+🔄 Switched to fallback model: muse-spark-1.2 via opencode-zen → openrouter/free via openrouter
+⚠️ Tool guardrail halted terminal: same_tool_failure_halt
+
+I stopped retrying terminal because it hit the tool-call guardrail (same_tool_failure_halt) after 3 repeated non-progressing attempts. The last tool result explains the blocker; the next step is to change strategy instead of repeating the same call.
+
+⚠ Auxiliary title generation failed: HTTP 400: Error from provider (Console): Upstream request failed: Model is unavailable.
+🔄 Switched to fallback model: muse-spark-1.2 via opencode-zen → openrouter/free via openrouter
+  Hermes backend listening on 127.0.0.1:37685
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "66b12292", "stored_session_id": "20260826_143859_8a9741", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "0e0e3ad2", "stored_session_id": "20260826_144032_16cf79", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "ec7d9f56", "stored_session_id": "20260826_145112_d83f53", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+⚠ Auxiliary title generation failed: HTTP 400: Error from provider (Console): Upstream request failed: Model is unavailable.
+🔄 Switched to fallback model: muse-spark-1.2 via opencode-zen → openrouter/free via openrouter
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "session.reclaimed", "session_id": "", "payload": {"session_id": "1680d51a", "stored_session_id": "20260826_161658_483a40", "reason": "ws_orphan_reap"}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "platforms.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "sessions.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
+{"jsonrpc": "2.0", "method": "event", "params": {"type": "cron.changed", "session_id": "", "payload": {}}}
