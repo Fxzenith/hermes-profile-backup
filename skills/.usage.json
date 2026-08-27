@@ -735,14 +735,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T12:42:54.428504+00:00",
-    "last_viewed_at": "2026-08-24T12:42:54.404861+00:00",
+    "last_used_at": "2026-08-27T02:09:53.946010+00:00",
+    "last_viewed_at": "2026-08-27T02:09:53.937329+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 47,
-    "view_count": 46
+    "use_count": 49,
+    "view_count": 48
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -855,14 +855,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-09T16:43:01.290840+00:00",
-    "last_viewed_at": "2026-08-09T16:43:01.285288+00:00",
+    "last_used_at": "2026-08-27T01:56:33.005903+00:00",
+    "last_viewed_at": "2026-08-27T01:56:32.999959+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "himalaya": {
     "archived_at": null,
@@ -1109,14 +1109,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T14:37:16.828997+00:00",
-    "last_viewed_at": "2026-08-24T14:37:16.819825+00:00",
+    "last_used_at": "2026-08-27T01:56:30.501435+00:00",
+    "last_viewed_at": "2026-08-27T01:56:30.493531+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "manim-video": {
     "archived_at": null,

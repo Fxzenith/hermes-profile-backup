@@ -22,15 +22,15 @@
       "schedule_display": "0 11 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-08T03:39:07.769807+02:00",
-      "next_run_at": "2026-08-27T11:00:00+02:00",
-      "last_run_at": "2026-08-26T11:02:10.583951+02:00",
+      "next_run_at": "2026-08-28T11:00:00+02:00",
+      "last_run_at": "2026-08-27T11:02:11.540575+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -62,15 +62,15 @@
       "schedule_display": "0 12,14,16,18,20,22 * * *",
       "repeat": {
         "times": null,
-        "completed": 105
+        "completed": 111
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T09:23:17.735622+02:00",
-      "next_run_at": "2026-08-26T22:00:00+02:00",
-      "last_run_at": "2026-08-26T18:01:38.729655+02:00",
+      "next_run_at": "2026-08-27T22:00:00+02:00",
+      "last_run_at": "2026-08-27T18:01:18.474634+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -108,17 +108,17 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T14:51:13.633845+02:00",
-      "next_run_at": "2026-08-27T18:00:00+02:00",
-      "last_run_at": "2026-08-26T18:02:39.900063+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-28T18:00:00+02:00",
+      "last_run_at": "2026-08-27T18:03:05.299888+02:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\n[2026-08-27 18:00:04] [INFO] ==================================================\n[2026-08-27 18:00:04] [INFO] Starting evening REELS post\n[2026-08-27 18:00:14] [INFO] Created config: /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/config.json\n[2026-08-27 18:00:15] [INFO] Generation output: 1/1 /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/post.png\n\nDone — single image saved to /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/post.png\n[2026-08-27 18:00:15] [INFO] Generated 1 image(s)\n[2026-08-27 18:00:15] [INFO] Generated image: /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/post.png\n[2026-08-27 18:00:15] [INFO] Track for today: track-07.mp3\n[2026-08-27 18:00:28] [INFO] Rendered reel: /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/reel/reel.mp4 (7.1s)\n[2026-08-27 18:00:28] [INFO] Creating reel container (reel.mp4) try 1/3...\n[2026-08-27 18:00:44] [INFO] Reel container created: 18147007522535272\n[2026-08-27 18:00:44] [INFO] Publishing reel container 18147007522535272 try 1/3...\n[2026-08-27 18:02:17] [INFO] Publishing reel container 18147007522535272 try 2/3...\n[2026-08-27 18:02:57] [INFO] Publishing reel container 18147007522535272 try 3/3...\n[2026-08-27 18:03:04] [ERROR] Reel posting failed: reel publish unsuccessful: {'successful': False, 'data': {'message': 'Container 18147007522535272 has already been PUBLISHED. Each container can only be published once.', 'status_code': 409}, 'error': 'Container 18147007522535272 has already been PUBLISHED. Each container can only be published once.', 'logId': 'log_nXI4MC6FQwsu'}",
       "last_delivery_error": null,
       "deliver": "telegram:-1003938786142",
       "origin": {
@@ -157,15 +157,15 @@
       "schedule_display": "*/5 * * * *",
       "repeat": {
         "times": null,
-        "completed": 4734
+        "completed": 5022
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T18:41:23.517357+02:00",
-      "next_run_at": "2026-08-26T20:05:00+02:00",
-      "last_run_at": "2026-08-26T20:00:33.057312+02:00",
+      "next_run_at": "2026-08-27T20:05:00+02:00",
+      "last_run_at": "2026-08-27T20:00:07.710380+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -203,15 +203,15 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T09:10:25.108031+02:00",
-      "next_run_at": "2026-08-27T20:00:00+02:00",
-      "last_run_at": "2026-08-25T20:00:53.442250+02:00",
+      "next_run_at": "2026-08-28T20:00:00+02:00",
+      "last_run_at": "2026-08-26T20:01:19.527621+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -285,15 +285,15 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 210
+        "completed": 306
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T15:21:53.810696+02:00",
-      "next_run_at": "2026-08-26T20:15:00+02:00",
-      "last_run_at": "2026-08-26T20:00:33.943867+02:00",
+      "next_run_at": "2026-08-27T20:15:00+02:00",
+      "last_run_at": "2026-08-27T20:00:08.572562+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -310,5 +310,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-26T20:00:33.946233+02:00"
+  "updated_at": "2026-08-27T20:00:08.573952+02:00"
 }
