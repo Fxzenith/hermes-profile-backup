@@ -39,7 +39,7 @@ while ($true) {
     if (-not $tunnel) {
         Start-Sleep ([Math]::Min(60 * [Math]::Pow(2, $backoff), 900))
         Start-Process $ssh -ArgumentList '-R','27183:127.0.0.1:27183','-N','-T',
-            '-o','BatchMode=yes','-o','ServerAliveInterval=30','-o','ServerAliveCountMax=3',
+            '-o','BatchMode=yes','-o','ServerAliveInterval=30','-o','ServerAliveCountMax=6',
             '-o','ExitOnForwardFailure=yes','-o','ConnectTimeout=15',$hostUri -WindowStyle Hidden
         $backoff = [Math]::Min($backoff + 1, 4)
     } else { $backoff = 0 }

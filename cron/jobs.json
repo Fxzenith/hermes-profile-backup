@@ -22,15 +22,15 @@
       "schedule_display": "0 11 * * *",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 23
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-08T03:39:07.769807+02:00",
-      "next_run_at": "2026-08-28T11:00:00+02:00",
-      "last_run_at": "2026-08-27T11:02:11.540575+02:00",
+      "next_run_at": "2026-08-29T11:00:00+02:00",
+      "last_run_at": "2026-08-28T11:02:42.071107+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -38,7 +38,8 @@
       "origin": null,
       "enabled_toolsets": null,
       "workdir": "/root/projects/Instagram daily auto-post",
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "e96e49118730",
@@ -62,15 +63,15 @@
       "schedule_display": "0 12,14,16,18,20,22 * * *",
       "repeat": {
         "times": null,
-        "completed": 111
+        "completed": 117
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T09:23:17.735622+02:00",
-      "next_run_at": "2026-08-27T22:00:00+02:00",
-      "last_run_at": "2026-08-27T18:01:18.474634+02:00",
+      "next_run_at": "2026-08-28T22:00:00+02:00",
+      "last_run_at": "2026-08-28T18:01:10.974296+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -84,7 +85,11 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": {
+        "at": "2026-08-28T20:00:19.520557+02:00",
+        "by": "vm807cmml.yourlocaldomain.com:3683532:bca11038f2344fd8bd03bdbe408a1af7"
+      },
+      "failure_streak": 0
     },
     {
       "id": "7a4c465fbd09",
@@ -108,17 +113,17 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 20
+        "completed": 21
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T14:51:13.633845+02:00",
-      "next_run_at": "2026-08-28T18:00:00+02:00",
-      "last_run_at": "2026-08-27T18:03:05.299888+02:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n[2026-08-27 18:00:04] [INFO] ==================================================\n[2026-08-27 18:00:04] [INFO] Starting evening REELS post\n[2026-08-27 18:00:14] [INFO] Created config: /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/config.json\n[2026-08-27 18:00:15] [INFO] Generation output: 1/1 /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/post.png\n\nDone — single image saved to /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/post.png\n[2026-08-27 18:00:15] [INFO] Generated 1 image(s)\n[2026-08-27 18:00:15] [INFO] Generated image: /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/post.png\n[2026-08-27 18:00:15] [INFO] Track for today: track-07.mp3\n[2026-08-27 18:00:28] [INFO] Rendered reel: /root/projects/Instagram daily auto-post/workspace/2026-08-27/post-02/reel/reel.mp4 (7.1s)\n[2026-08-27 18:00:28] [INFO] Creating reel container (reel.mp4) try 1/3...\n[2026-08-27 18:00:44] [INFO] Reel container created: 18147007522535272\n[2026-08-27 18:00:44] [INFO] Publishing reel container 18147007522535272 try 1/3...\n[2026-08-27 18:02:17] [INFO] Publishing reel container 18147007522535272 try 2/3...\n[2026-08-27 18:02:57] [INFO] Publishing reel container 18147007522535272 try 3/3...\n[2026-08-27 18:03:04] [ERROR] Reel posting failed: reel publish unsuccessful: {'successful': False, 'data': {'message': 'Container 18147007522535272 has already been PUBLISHED. Each container can only be published once.', 'status_code': 409}, 'error': 'Container 18147007522535272 has already been PUBLISHED. Each container can only be published once.', 'logId': 'log_nXI4MC6FQwsu'}",
+      "next_run_at": "2026-08-29T18:00:00+02:00",
+      "last_run_at": "2026-08-28T18:01:20.877172+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "telegram:-1003938786142",
       "origin": {
@@ -133,7 +138,8 @@
         "file"
       ],
       "workdir": "/root/projects/Instagram daily auto-post",
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "224c16877449",
@@ -157,15 +163,15 @@
       "schedule_display": "*/5 * * * *",
       "repeat": {
         "times": null,
-        "completed": 5022
+        "completed": 5310
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T18:41:23.517357+02:00",
-      "next_run_at": "2026-08-27T20:05:00+02:00",
-      "last_run_at": "2026-08-27T20:00:07.710380+02:00",
+      "next_run_at": "2026-08-28T20:05:00+02:00",
+      "last_run_at": "2026-08-28T20:00:19.966093+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -179,7 +185,8 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "failure_streak": 0
     },
     {
       "id": "575f58e570b2",
@@ -203,15 +210,15 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T09:10:25.108031+02:00",
-      "next_run_at": "2026-08-28T20:00:00+02:00",
-      "last_run_at": "2026-08-26T20:01:19.527621+02:00",
+      "next_run_at": "2026-08-29T20:00:00+02:00",
+      "last_run_at": "2026-08-27T20:00:30.526273+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -219,7 +226,10 @@
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": {
+        "at": "2026-08-28T20:00:19.577131+02:00",
+        "by": "vm807cmml.yourlocaldomain.com:3683532:3738fc544b5a4eafaf1de60c795f1215"
+      }
     },
     {
       "id": "b88ae9b1d610",
@@ -261,54 +271,97 @@
       "workdir": null
     },
     {
-      "id": "80e0d6dcd70b",
-      "name": "local-hermes-link-watchdog",
-      "prompt": "",
-      "skills": [],
-      "skill": null,
+      "id": "3c98da2d9134",
+      "name": "Morning briefing",
+      "prompt": "Produce a concise morning briefing for the user: today's calendar events, the local weather, and any urgent items. When Gmail/Google Calendar are connected, follow the google-workspace skill's references/daily-brief.md procedure (exact day window, conflict detection, meeting prep, mail-to-meeting links). Keep it short and scannable. If no data sources are connected, give a brief good-morning with the date and offer to connect calendar/email.",
+      "skills": [
+        "google-workspace"
+      ],
+      "skill": "google-workspace",
       "model": null,
       "provider": null,
-      "provider_snapshot": null,
-      "model_snapshot": null,
+      "provider_snapshot": "opencode-free",
+      "model_snapshot": "muse-spark-1.2-contributor-free",
       "base_url": null,
-      "script": "link_watchdog.py",
-      "no_agent": true,
+      "script": null,
+      "no_agent": false,
       "monitor_script": null,
       "monitor_url": null,
       "monitor_state": null,
       "context_from": null,
       "schedule": {
         "kind": "cron",
-        "expr": "*/15 * * * *",
-        "display": "*/15 * * * *"
+        "expr": "0 7 * * *",
+        "display": "0 7 * * *"
       },
-      "schedule_display": "*/15 * * * *",
+      "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 306
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-08-24T15:21:53.810696+02:00",
-      "next_run_at": "2026-08-27T20:15:00+02:00",
-      "last_run_at": "2026-08-27T20:00:08.572562+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "created_at": "2026-08-28T02:13:44.938473+02:00",
+      "next_run_at": "2026-08-29T07:00:00+02:00",
+      "last_run_at": "2026-08-28T07:00:38.029101+02:00",
+      "last_status": "blocked_config",
+      "last_error": "[blocked_config] attached skill 'google-workspace' is not ready: missing credential file google_token.json, credential file google_client_secret.json. Provide the missing prerequisites or detach the skill from this job.",
       "last_delivery_error": null,
-      "deliver": "telegram:-1003938786142",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "6898985502",
-        "chat_name": "Ze Nith",
-        "thread_id": null,
-        "user_id": "6898985502"
-      },
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "preflight_alerted": true
+    },
+    {
+      "id": "f03448b8d278",
+      "name": "Weekly review",
+      "prompt": "Run the weekly-review-planning skill's procedure for the user: review the completed week and coming 1-2 weeks across connected calendar, tasks, notes, and email; surface commitments, stalled projects, and waiting items; build a capacity-aware plan for next week. Recommendations and drafts only — no mutations without approval. Keep the output in the skill's seven-section shape.",
+      "skills": [
+        "weekly-review-planning"
+      ],
+      "skill": "weekly-review-planning",
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "opencode-free",
+      "model_snapshot": "muse-spark-1.2-contributor-free",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * 0",
+        "display": "0 18 * * 0"
+      },
+      "schedule_display": "0 18 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-28T02:14:08.659123+02:00",
+      "next_run_at": "2026-08-30T18:00:00+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-08-27T20:00:08.573952+02:00"
+  "updated_at": "2026-08-28T20:00:19.971313+02:00"
 }

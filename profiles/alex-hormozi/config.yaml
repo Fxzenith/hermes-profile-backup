@@ -117,7 +117,7 @@ display:
     enabled: true
     slug: homelander
     scale: 0.35
-  background_process_notifications: all
+  background_process_notifications: concise
   busy_ack_detail: true
   cleanup_progress: false
   long_running_notifications: true
@@ -150,7 +150,7 @@ memory:
   flush_min_turns: 6
   nudge_interval: 10
 delegation:
-  max_iterations: 50
+  max_iterations: 250
   max_concurrent_children: 5
 moa:
   presets:
@@ -239,7 +239,7 @@ updates:
   pre_update_backup: false
   backup_keep: 5
   non_interactive_local_changes: stash
-_config_version: 34
+_config_version: 39
 group_sessions_per_user: true
 known_plugin_toolsets:
   cli:
@@ -333,3 +333,19 @@ mcp_servers:
     auth: oauth
     timeout: 180
     connect_timeout: 60
+
+# ── Security ──────────────────────────────────────────────────────────
+# Secret redaction is ON by default — strings that look like API keys,
+# tokens, and passwords are masked in tool output, logs, and chat
+# responses before the model or user ever sees them. Set redact_secrets
+# to false to disable (e.g. when developing the redactor itself).
+# tirith pre-exec scanning is enabled by default when the tirith binary
+# is available. Configure via security.tirith_* keys or env vars
+# (TIRITH_ENABLED, TIRITH_BIN, TIRITH_TIMEOUT, TIRITH_FAIL_OPEN).
+#
+# security:
+#   redact_secrets: true
+#   tirith_enabled: true
+#   tirith_path: "tirith"
+#   tirith_timeout: 5
+#   tirith_fail_open: true

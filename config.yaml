@@ -1,7 +1,7 @@
 model:
-  default: gemini-3.6-flash
-  provider: gemini
-  base_url: https://generativelanguage.googleapis.com/v1beta
+  default: muse-spark-1.2-contributor-free
+  provider: opencode-free
+  base_url: https://opencode.ai/zen/v1
 credential_pool_strategies:
   nvidia: round_robin
 agent:
@@ -120,7 +120,7 @@ display:
     enabled: true
     slug: homelander
     scale: 0.35
-  background_process_notifications: all
+  background_process_notifications: concise
   busy_ack_detail: true
   cleanup_progress: false
   long_running_notifications: true
@@ -154,7 +154,7 @@ memory:
   flush_min_turns: 6
   nudge_interval: 10
 delegation:
-  max_iterations: 50
+  max_iterations: 250
   max_concurrent_children: 5
 moa:
   presets:
@@ -245,7 +245,7 @@ updates:
   pre_update_backup: false
   backup_keep: 5
   non_interactive_local_changes: stash
-_config_version: 34
+_config_version: 39
 group_sessions_per_user: true
 known_plugin_toolsets:
   cli:
