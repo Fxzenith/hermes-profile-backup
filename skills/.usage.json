@@ -142,15 +142,15 @@
     "created_at": "2026-08-18T12:50:45.979475+00:00",
     "created_by": null,
     "last_patched_at": "2026-08-26T08:50:49.375114+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-26T08:01:49.521804+00:00",
-    "last_viewed_at": "2026-08-26T08:01:49.507643+00:00",
+    "last_reused_patch_generation": 1,
+    "last_used_at": "2026-08-29T09:33:16.899227+00:00",
+    "last_viewed_at": "2026-08-29T09:33:16.851190+00:00",
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "automation-pipeline-ops": {
     "archived_at": null,
@@ -692,13 +692,13 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-28T05:00:35.019616+00:00",
+    "last_used_at": "2026-08-29T05:00:06.810799+00:00",
     "last_viewed_at": null,
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
+    "use_count": 2,
     "view_count": 0
   },
   "grounded-citations": {
@@ -731,20 +731,50 @@
     "use_count": 6,
     "view_count": 3
   },
+  "headless-cli-auth": {
+    "archived_at": null,
+    "created_at": "2026-08-28T22:31:51.642511+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-28T22:32:05.637569+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-28T22:32:01.953827+00:00",
+    "last_viewed_at": "2026-08-28T22:32:01.943301+00:00",
+    "patch_count": 4,
+    "patch_generation": 4,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "headless-desktop-vm": {
+    "archived_at": null,
+    "created_at": "2026-08-29T02:57:36.768363+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-29T09:47:06.277142+00:00",
+    "last_reused_patch_generation": 2,
+    "last_used_at": "2026-08-29T09:46:45.151138+00:00",
+    "last_viewed_at": "2026-08-29T09:46:45.136627+00:00",
+    "patch_count": 6,
+    "patch_generation": 6,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
+  },
   "hermes-agent": {
     "archived_at": null,
     "created_at": "2026-07-29T14:21:09.740126+00:00",
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-27T02:09:53.946010+00:00",
-    "last_viewed_at": "2026-08-27T02:09:53.937329+00:00",
+    "last_used_at": "2026-08-28T22:31:39.615044+00:00",
+    "last_viewed_at": "2026-08-28T22:31:39.607370+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 49,
-    "view_count": 48
+    "use_count": 50,
+    "view_count": 49
   },
   "hermes-agent-skill-authoring": {
     "archived_at": null,
@@ -1376,14 +1406,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-27T23:42:26.976157+00:00",
-    "last_viewed_at": "2026-08-13T13:15:53.752842+00:00",
+    "last_used_at": "2026-08-29T09:34:13.948159+00:00",
+    "last_viewed_at": "2026-08-29T01:54:41.926437+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 23,
-    "view_count": 1
+    "use_count": 27,
+    "view_count": 2
   },
   "polymarket": {
     "archived_at": null,
@@ -1505,6 +1535,21 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "root-cleanup": {
+    "archived_at": null,
+    "created_at": "2026-08-29T01:54:43.544756+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-08-29T09:33:16.884409+00:00",
+    "last_viewed_at": "2026-08-29T09:33:16.838456+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
   },
   "sdlc-review": {
     "archived_at": null,

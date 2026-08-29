@@ -22,15 +22,15 @@
       "schedule_display": "0 11 * * *",
       "repeat": {
         "times": null,
-        "completed": 23
+        "completed": 24
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-08T03:39:07.769807+02:00",
-      "next_run_at": "2026-08-29T11:00:00+02:00",
-      "last_run_at": "2026-08-28T11:02:42.071107+02:00",
+      "next_run_at": "2026-08-30T11:00:00+02:00",
+      "last_run_at": "2026-08-29T11:03:03.966679+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -63,15 +63,15 @@
       "schedule_display": "0 12,14,16,18,20,22 * * *",
       "repeat": {
         "times": null,
-        "completed": 117
+        "completed": 123
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T09:23:17.735622+02:00",
-      "next_run_at": "2026-08-28T22:00:00+02:00",
-      "last_run_at": "2026-08-28T18:01:10.974296+02:00",
+      "next_run_at": "2026-08-29T22:00:00+02:00",
+      "last_run_at": "2026-08-29T18:01:27.532547+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -86,8 +86,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-28T20:00:19.520557+02:00",
-        "by": "vm807cmml.yourlocaldomain.com:3683532:bca11038f2344fd8bd03bdbe408a1af7"
+        "at": "2026-08-29T20:00:24.861606+02:00",
+        "by": "vm807cmml.yourlocaldomain.com:3634918:f1178ecb9323414fa76804b71c0fd3cb"
       },
       "failure_streak": 0
     },
@@ -113,15 +113,15 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T14:51:13.633845+02:00",
-      "next_run_at": "2026-08-29T18:00:00+02:00",
-      "last_run_at": "2026-08-28T18:01:20.877172+02:00",
+      "next_run_at": "2026-08-30T18:00:00+02:00",
+      "last_run_at": "2026-08-29T18:01:27.675271+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -163,15 +163,15 @@
       "schedule_display": "*/5 * * * *",
       "repeat": {
         "times": null,
-        "completed": 5310
+        "completed": 5598
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T18:41:23.517357+02:00",
-      "next_run_at": "2026-08-28T20:05:00+02:00",
-      "last_run_at": "2026-08-28T20:00:19.966093+02:00",
+      "next_run_at": "2026-08-29T20:05:00+02:00",
+      "last_run_at": "2026-08-29T20:00:25.439091+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -210,15 +210,15 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T09:10:25.108031+02:00",
-      "next_run_at": "2026-08-29T20:00:00+02:00",
-      "last_run_at": "2026-08-27T20:00:30.526273+02:00",
+      "next_run_at": "2026-08-30T20:00:00+02:00",
+      "last_run_at": "2026-08-28T20:01:00.063569+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -227,9 +227,10 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-28T20:00:19.577131+02:00",
-        "by": "vm807cmml.yourlocaldomain.com:3683532:3738fc544b5a4eafaf1de60c795f1215"
-      }
+        "at": "2026-08-29T20:00:24.907240+02:00",
+        "by": "vm807cmml.yourlocaldomain.com:3634918:49817e5b2e154561b3fb2a27e4f384de"
+      },
+      "failure_streak": 0
     },
     {
       "id": "b88ae9b1d610",
@@ -297,19 +298,19 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-28T02:13:44.938473+02:00",
-      "next_run_at": "2026-08-29T07:00:00+02:00",
-      "last_run_at": "2026-08-28T07:00:38.029101+02:00",
+      "next_run_at": "2026-08-30T07:00:00+02:00",
+      "last_run_at": "2026-08-29T07:00:08.225493+02:00",
       "last_status": "blocked_config",
-      "last_error": "[blocked_config] attached skill 'google-workspace' is not ready: missing credential file google_token.json, credential file google_client_secret.json. Provide the missing prerequisites or detach the skill from this job.",
+      "last_error": "[blocked_config:silent] attached skill 'google-workspace' is not ready: missing credential file google_token.json, credential file google_client_secret.json. Provide the missing prerequisites or detach the skill from this job.",
       "last_delivery_error": null,
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": null,
       "enabled_toolsets": null,
@@ -363,5 +364,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-08-28T20:00:19.971313+02:00"
+  "updated_at": "2026-08-29T20:00:25.443884+02:00"
 }

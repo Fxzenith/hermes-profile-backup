@@ -118,5 +118,29 @@
     "timestamp": "2026-08-24T12:57:17.643597+00:00",
     "category": "temp",
     "size": 503
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1787576305-fbe2370a.sh",
+    "timestamp": "2026-08-24T12:58:25.716216+00:00",
+    "category": "temp",
+    "size": 573
+  },
+  {
+    "path": "/root/.hermes/cache/images/img_21dd4c392995.jpg",
+    "timestamp": "2026-08-29T01:58:30.575521+00:00",
+    "category": "temp",
+    "size": 28947
+  },
+  {
+    "path": "/root/.hermes/cache/blocked-scripts/blocked-1787995972-1be5a51b.sh",
+    "timestamp": "2026-08-29T09:32:52.533615+00:00",
+    "category": "temp",
+    "size": 517
+  },
+  {
+    "path": "/root/.hermes/cache/images/img_25b38ede0635.jpg",
+    "timestamp": "2026-08-29T09:48:59.858444+00:00",
+    "category": "temp",
+    "size": 17495
   }
 ]
