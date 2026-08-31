@@ -142,5 +142,11 @@
     "timestamp": "2026-08-29T09:48:59.858444+00:00",
     "category": "temp",
     "size": 17495
+  },
+  {
+    "path": "/root/.hermes/cache/delegation/live/deleg_090e7590/task-0.log",
+    "timestamp": "2026-08-29T10:19:55.268898+00:00",
+    "category": "temp",
+    "size": 10755
   }
 ]

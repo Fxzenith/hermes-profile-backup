@@ -1,0 +1,92 @@
+[
+  {
+    "rank": 1,
+    "title": "\u201cI just chose words carefully\u201d",
+    "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
+    "points": 780,
+    "comments": 196,
+    "by": "zdw",
+    "type": "story"
+  },
+  {
+    "rank": 2,
+    "title": "P99 0 ms* autocomplete for 240M domain names",
+    "url": "https://ruurtjan.com/articles/p99-0ms-autocomplete-for-240-million-domain-names",
+    "points": 122,
+    "comments": 53,
+    "by": "dbalatero",
+    "type": "story"
+  },
+  {
+    "rank": 3,
+    "title": "Creepy Crawlies",
+    "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
+    "points": 1160,
+    "comments": 575,
+    "by": "zdw",
+    "type": "story"
+  },
+  {
+    "rank": 4,
+    "title": "My hobby of building miniatures and taking pretty pictures",
+    "url": "https://sandyuraz.com/blogs/tiny-cafe/",
+    "points": 129,
+    "comments": 18,
+    "by": "thecsw",
+    "type": "story"
+  },
+  {
+    "rank": 5,
+    "title": "Highlighting My Code Based on How Much I Care",
+    "url": "https://hank.bond/posts/highlighting-my-code-based-on-how-much-i-care/",
+    "points": 50,
+    "comments": 20,
+    "by": "hankbond",
+    "type": "story"
+  },
+  {
+    "rank": 6,
+    "title": "A 12TB Steam \"teraleak\" spills more than a decade of lost PC gaming history",
+    "url": "https://arstechnica.com/gaming/2026/08/a-12tb-steam-teraleak-spills-more-than-a-decade-of-lost-pc-gaming-history/",
+    "points": 116,
+    "comments": 14,
+    "by": "WithinReason",
+    "type": "story"
+  },
+  {
+    "rank": 7,
+    "title": "Understanding ChatGPT Work",
+    "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+    "points": 187,
+    "comments": 83,
+    "by": "gmays",
+    "type": "story"
+  },
+  {
+    "rank": 8,
+    "title": "Matrox: Graphics for Professionals",
+    "url": "https://www.abortretry.fail/p/matrox",
+    "points": 111,
+    "comments": 31,
+    "by": "BirAdam",
+    "type": "story"
+  },
+  {
+    "rank": 9,
+    "title": "Formalization of the Solution to the Hopf Problem",
+    "url": "https://github.com/plby/HopfProblem",
+    "points": 8,
+    "comments": 0,
+    "by": "robinhouston",
+    "type": "story"
+  },
+  {
+    "rank": 10,
+    "title": "Transfer files over an Ethernet patch cable",
+    "url": "https://maurycyz.com/misc/etherfiles/",
+    "points": 90,
+    "comments": 72,
+    "by": "jllyhill",
+    "type": "story"
+  }
+]

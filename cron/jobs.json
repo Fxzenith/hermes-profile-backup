@@ -22,15 +22,15 @@
       "schedule_display": "0 11 * * *",
       "repeat": {
         "times": null,
-        "completed": 25
+        "completed": 26
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-08T03:39:07.769807+02:00",
-      "next_run_at": "2026-08-31T11:00:00+02:00",
-      "last_run_at": "2026-08-30T11:03:05.440865+02:00",
+      "next_run_at": "2026-09-01T11:00:00+02:00",
+      "last_run_at": "2026-08-31T11:02:29.280060+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -63,15 +63,15 @@
       "schedule_display": "0 12,14,16,18,20,22 * * *",
       "repeat": {
         "times": null,
-        "completed": 129
+        "completed": 135
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T09:23:17.735622+02:00",
-      "next_run_at": "2026-08-30T22:00:00+02:00",
-      "last_run_at": "2026-08-30T18:01:17.291305+02:00",
+      "next_run_at": "2026-08-31T22:00:00+02:00",
+      "last_run_at": "2026-08-31T18:01:30.333392+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -86,8 +86,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-30T20:00:10.558666+02:00",
-        "by": "vm807cmml.yourlocaldomain.com:3972014:7bc1016c94d3485aadd75353b2458738"
+        "at": "2026-08-31T20:00:32.153588+02:00",
+        "by": "vm807cmml.yourlocaldomain.com:3605002:cd0545b9c8c14b77887354b2dc58aedc"
       },
       "failure_streak": 0
     },
@@ -113,15 +113,15 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 23
+        "completed": 24
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T14:51:13.633845+02:00",
-      "next_run_at": "2026-08-31T18:00:00+02:00",
-      "last_run_at": "2026-08-30T18:01:31.923700+02:00",
+      "next_run_at": "2026-09-01T18:00:00+02:00",
+      "last_run_at": "2026-08-31T18:01:44.576511+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -163,15 +163,15 @@
       "schedule_display": "*/5 * * * *",
       "repeat": {
         "times": null,
-        "completed": 5886
+        "completed": 6174
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-09T18:41:23.517357+02:00",
-      "next_run_at": "2026-08-30T20:05:00+02:00",
-      "last_run_at": "2026-08-30T20:00:11.102933+02:00",
+      "next_run_at": "2026-08-31T20:05:00+02:00",
+      "last_run_at": "2026-08-31T20:00:32.704144+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -210,15 +210,15 @@
       "schedule_display": "0 20 * * *",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-11T09:10:25.108031+02:00",
-      "next_run_at": "2026-08-31T20:00:00+02:00",
-      "last_run_at": "2026-08-29T20:01:18.161689+02:00",
+      "next_run_at": "2026-09-01T20:00:00+02:00",
+      "last_run_at": "2026-08-30T20:00:38.061483+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -227,8 +227,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-30T20:00:10.646627+02:00",
-        "by": "vm807cmml.yourlocaldomain.com:3972014:3ace1f42cf674ba1806695fedca32295"
+        "at": "2026-08-31T20:00:32.216978+02:00",
+        "by": "vm807cmml.yourlocaldomain.com:3605002:577bcceaa23b4cf1af82838c7dcc335c"
       },
       "failure_streak": 0
     },
@@ -274,11 +274,9 @@
     {
       "id": "3c98da2d9134",
       "name": "Morning briefing",
-      "prompt": "Produce a concise morning briefing for the user: today's calendar events, the local weather, and any urgent items. When Gmail/Google Calendar are connected, follow the google-workspace skill's references/daily-brief.md procedure (exact day window, conflict detection, meeting prep, mail-to-meeting links). Keep it short and scannable. If no data sources are connected, give a brief good-morning with the date and offer to connect calendar/email.",
-      "skills": [
-        "google-workspace"
-      ],
-      "skill": "google-workspace",
+      "prompt": "Produce a concise morning briefing for the user (Africa/Johannesburg timezone, date: today).\n\nData sources — use Composio CLI (binary at ~/.composio/composio):\n- Calendar: `~/.composio/composio execute GOOGLECALENDAR_EVENTS_LIST -d '{\"calendarId\":\"primary\",\"timeMin\":\"<today>00:00:00+02:00\",\"timeMax\":\"<today>23:59:59+02:00\",\"singleEvents\":true,\"maxResults\":20}'` and also try GOOGLECALENDAR_EVENTS_LIST_ALL_CALENDARS if primary is empty. Detect conflicts (overlapping events) and flag them.\n- Email: `~/.composio/composio execute GMAIL_FETCH_EMAILS -d '{\"max_results\":10,\"query\":\"is:unread newer_than:2d\"}'` — surface urgent/unread (max 5) with subject + sender, link to meeting if relevant.\n- Weather: use web search or just give date/day overview if weather unavailable.\n\nFollow the daily-brief structure from google-workspace/references/daily-brief.md (exact day window, conflict detection, meeting prep, mail-to-meeting links) but using Composio data.\n\nKeep it short, scannable, Telegram-formatted (bold headers, bullet lists). If no events/mail, say so warmly. Always include today's date.",
+      "skills": [],
+      "skill": null,
       "model": null,
       "provider": null,
       "provider_snapshot": "opencode-free",
@@ -298,25 +296,24 @@
       "schedule_display": "0 7 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-28T02:13:44.938473+02:00",
-      "next_run_at": "2026-08-31T07:00:00+02:00",
-      "last_run_at": "2026-08-30T07:00:16.987849+02:00",
-      "last_status": "blocked_config",
-      "last_error": "[blocked_config:silent] attached skill 'google-workspace' is not ready: missing credential file google_token.json, credential file google_client_secret.json. Provide the missing prerequisites or detach the skill from this job.",
+      "next_run_at": "2026-09-01T07:00:00+02:00",
+      "last_run_at": "2026-08-31T11:17:44.191682+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
-      "failure_streak": 3,
-      "deliver": "origin",
+      "failure_streak": 0,
+      "deliver": "telegram:-1003938786142",
       "origin": null,
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null,
-      "preflight_alerted": true
+      "fire_claim": null
     },
     {
       "id": "f03448b8d278",
@@ -365,5 +362,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-30T20:00:11.104689+02:00"
+  "updated_at": "2026-08-31T20:00:32.705456+02:00"
 }

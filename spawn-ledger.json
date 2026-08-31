@@ -52,16 +52,16 @@
     "profile": ""
   },
   {
-    "pid": 3972014,
-    "create_time": 1788074767.74,
+    "pid": 4123999,
+    "create_time": 1788170827.57,
     "purpose": "serve",
     "install": "76f6e7e5145b",
     "spawner_pid": null,
     "spawner_create": null,
-    "registered_at": 1788074773.9548337,
-    "argv": "/root/.local/bin/hermes serve --isolated --host 127.0.0.1 --port 0 --ssh-session-token-file /root/.hermes/desktop-ssh/a7123aec5611044e6c225c09acbc1b19/902ed302958b4c3b.token --ssh-owner-nonce",
+    "registered_at": 1788170834.5764046,
+    "argv": "/root/.local/bin/hermes serve --isolated --host 127.0.0.1 --port 0 --ssh-session-token-file /root/.hermes/desktop-ssh/a7123aec5611044e6c225c09acbc1b19/a0f407ae34d653a2.token --ssh-owner-nonce",
     "host": "127.0.0.1",
-    "port": 37793,
+    "port": 40921,
     "profile": ""
   }
 ]
