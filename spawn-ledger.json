@@ -26,42 +26,42 @@
     "profile": ""
   },
   {
-    "pid": 35499,
-    "create_time": 1788236689.51,
+    "pid": 169370,
+    "create_time": 1788324180.31,
     "purpose": "serve",
     "install": "76f6e7e5145b",
     "spawner_pid": null,
     "spawner_create": null,
-    "registered_at": 1788236696.6020737,
+    "registered_at": 1788324187.3088818,
     "argv": "/root/.local/bin/hermes serve --host 0.0.0.0 --port 9119 --skip-build",
     "host": "0.0.0.0",
     "port": 9119,
     "profile": ""
   },
   {
-    "pid": 35616,
-    "create_time": 1788236694.54,
+    "pid": 169564,
+    "create_time": 1788324185.35,
     "purpose": "dashboard",
     "install": "76f6e7e5145b",
     "spawner_pid": null,
     "spawner_create": null,
-    "registered_at": 1788236700.0770276,
+    "registered_at": 1788324191.4884374,
     "argv": "/root/.local/bin/hermes dashboard --port 9120 --host 0.0.0.0 --skip-build --no-open",
     "host": "0.0.0.0",
     "port": 9120,
     "profile": ""
   },
   {
-    "pid": 42353,
-    "create_time": 1788237322.99,
+    "pid": 241846,
+    "create_time": 1788363380.46,
     "purpose": "serve",
     "install": "76f6e7e5145b",
     "spawner_pid": null,
     "spawner_create": null,
-    "registered_at": 1788237328.3384988,
-    "argv": "/root/.local/bin/hermes serve --isolated --host 127.0.0.1 --port 0 --ssh-session-token-file /root/.hermes/desktop-ssh/a7123aec5611044e6c225c09acbc1b19/f09b50668992b647.token --ssh-owner-nonce",
+    "registered_at": 1788363385.5103083,
+    "argv": "/root/.local/bin/hermes serve --isolated --host 127.0.0.1 --port 0 --ssh-session-token-file /root/.hermes/desktop-ssh/a7123aec5611044e6c225c09acbc1b19/06afa1ff56ad072c.token --ssh-owner-nonce",
     "host": "127.0.0.1",
-    "port": 45903,
+    "port": 45059,
     "profile": ""
   }
 ]
